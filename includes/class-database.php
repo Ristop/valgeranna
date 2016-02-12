@@ -22,7 +22,17 @@
                 return $result;
             }
 
+            public function select($query){
+
+                $result = $this->connection->query($query);
+                $results = [];
+                while($line = $result->fetch_object()){
+                    $results[] = $line;
+                }
+                return $results;
+            }
+
         }
     }
-    $db = new DB;
+    $db = new DB();
 ?>

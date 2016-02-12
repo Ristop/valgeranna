@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Lisa uudis</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -69,7 +70,20 @@
             <button type="submit" class="btn btn-default" value="Submit"> Lisa </button>
         </form>
         <h3>Varasemad postitused</h3>
-
+        <?php
+        require_once('../includes/class-query.php');
+        $old_news = $query->all_news();
+        //print_r($old_news);
+        foreach(array_reverse($old_news) as &$line){
+            print_r('<div class="panel panel-default">');
+            print_r('<div class="panel-heading">');
+            print_r($line->pealkiri);
+            print_r('<button class="btn-danger" id="news-delete-button">Eemalda</button></div>');
+            print_r('<div class="panel-body">');
+            print_r($line->sisu);
+            print_r('</div></div>');
+        }
+        ?>
     </div>
 
 </body>

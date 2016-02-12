@@ -21,5 +21,5 @@ if(!class_exists('INSERT')){
         }
     }
 
-    $insert = new INSERT;
+    $insert = new INSERT();
 }

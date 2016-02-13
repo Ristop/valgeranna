@@ -1,4 +1,7 @@
 <?php
+
+//error_reporting(E_ALL);
+//ini_set('display_errors','1');
 /**
  * Created by PhpStorm.
  * User: Risto
@@ -18,6 +21,11 @@
             }
 
             public function insert($query){
+                $result = $this->connection->query($query);
+                return $result;
+            }
+
+            public function delete($query){
                 $result = $this->connection->query($query);
                 return $result;
             }

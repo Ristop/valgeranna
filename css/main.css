@@ -1,3 +1,12 @@
 #news-delete-button{
     float: right;
+    height: 20px;
+    font-size: 10px;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+#news-delete{
+    margin: 0;
+    float: right;
 }

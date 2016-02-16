@@ -2,8 +2,8 @@
 <html lang="en">
 
 <?php
-//error_reporting(E_ALL);
-//ini_set('display_errors','1');
+error_reporting(E_ALL);
+ini_set('display_errors','1');
 
 $add_message = "";
 $delete_message = "";
@@ -11,13 +11,13 @@ if(!empty($_POST)){
     if(isset($_POST['title']) and isset($_POST['content']) and isset($_POST['date'])){
         //print_r($_POST);
         require_once('../includes/class-insert.php');
-        if($insert->uudis($_POST['title'], $_POST['content'], $_POST['date'])){
+        if($insert->uudis(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), htmlspecialchars($_POST['date']))){
             $add_message = '<div class="alert alert-success" role="alert">Uudis edukalt lisatud!</div>';
         }
     }
     if (isset($_POST['old_id'])){
         require_once('../includes/class-delete.php');
-        if($delete->uudis($_POST['old_id'])){
+        if($delete->uudis(htmlspecialchars($_POST['old_id']))){
             $delete_message = '<div class="alert alert-success" role="alert">Postitus kustutatud!</div>';
         }
     }
@@ -59,7 +59,7 @@ $old_news = $query->all_news();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Admin menu</a>
+                    <a class="navbar-brand" href="post-new.php">Admin menu</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,7 +67,7 @@ $old_news = $query->all_news();
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="post-new.php">Uudised <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">Pildid</a></li>
-
+                        <li><a href="../index.php">Tagasi koju</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -87,26 +87,30 @@ $old_news = $query->all_news();
                 <input type="hidden" id= "date" name="date" value="">
             </div>
             <button type="submit" class="btn btn-default" value="Submit"> Lisa </button>
-
         </form>
+
         <br>
+
         <?php echo $delete_message ?>
         <h3><?php if(!empty($old_news)){echo "Varasemad postitused";} ?></h3>
-        <?php foreach (array_reverse($old_news) as $article): ?>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <?php echo $article->pealkiri;?>
-                    <form method="post" action="post-new.php" id="news-delete">
-                        <button class="btn-danger" type="submit" id="news-delete-button" name="old_id" value="<?php echo $article->id;?>">Eemalda</button>
-                    </form>
+        <div class="row">
+            <?php foreach (array_reverse($old_news) as $article): ?>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <?php echo htmlspecialchars($article->pealkiri);?>
+                            <form method="post" action="post-new.php" id="news-delete">
+                                <button class="btn-danger" type="submit" id="news-delete-button" name="old_id" value="<?php echo $article->id;?>">Kustuta</button>
+                            </form>
+                        </div>
+                        <div class="panel-body">
+                            <?php echo htmlspecialchars($article->sisu);?>
+                        </div>
+                        <div class="panel-footer">Kuupäev: <?php echo htmlspecialchars($article->kuupaev);?></div>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <?php echo $article->sisu;?>
-                    <br>
-                    <?php echo $article->kuupaev;?>
-                </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
 </body>
 </html>

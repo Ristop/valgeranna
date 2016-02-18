@@ -1,2 +1,2 @@
 # valgeranna
-Veebileht valgeranna puhkekeskusele
+Veebileht Valgeranna puhkekeskusele

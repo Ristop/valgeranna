@@ -10,3 +10,33 @@
     margin: 0;
     float: right;
 }
+/*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    float: left;
+}
+
+li:not(:last-child)  {
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0px;
+}
+*/
+/* Change the link color to #111 (black) on hover */
+/*
+li a:hover {
+    color: darkred;
+    background-color: #1b6d85;
+}*/

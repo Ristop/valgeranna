@@ -35,10 +35,12 @@
             <!-- Collection of nav links and other content for toggling -->
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <li><a href="index.php"><img src="./pic/logo.jpg" alt="Logo" style="width:60px;height:60px;"></a></li>
+                    <li><a href="toad.php">Toad</a></li>
+                    <li><a href="pildid.php">Galerii</a></li>
+                    <li><a href="broneeri.php">Broneeri</a></li>
                     <li><a href="uudised.php">Uudised</a></li>
-                    <li><a href="#">Galerii</a></li>
-                    <li><a href="#">Toad</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="kontakt.php">Kontakt</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="admin/post-new.php">Admin(ajutine)</a></li>

@@ -64,7 +64,7 @@ $old_news = $query->all_news();
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="post-new.php">Uudised</a></li>
-                    <li><a href="#">Pildid</a></li>
+                    <li><a href="upload-pic.php">Pildid</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../index.php">Tagasi koju</a></li>

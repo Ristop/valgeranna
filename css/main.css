@@ -1,4 +1,4 @@
-#news-delete-button{
+.news-delete-button{
     float: right;
     height: 20px;
     font-size: 10px;
@@ -6,7 +6,7 @@
     border-color: #d43f3a;
 }
 
-#news-delete{
+.news-delete{
     margin: 0;
     float: right;
 }

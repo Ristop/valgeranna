@@ -9,7 +9,7 @@ $add_message = "";
 $delete_message = "";
 if(!empty($_POST)){
     if(isset($_POST['title']) and isset($_POST['content']) and isset($_POST['date'])){
-        //print_r($_POST);
+        print_r($_POST);
         require_once('../includes/class-insert.php');
         if($insert->uudis(htmlspecialchars($_POST['title']), htmlspecialchars($_POST['content']), htmlspecialchars($_POST['date']))){
             $add_message = '<div class="alert alert-success" role="alert">Uudis edukalt lisatud!</div>';
@@ -32,7 +32,7 @@ $old_news = $query->all_news();
     <title>Lisa uudis</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
-    <script  type="text/javascript" src="../js/get-current-date.js"></script>
+
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -45,6 +45,7 @@ $old_news = $query->all_news();
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script  type="text/javascript" src="../js/get-current-date.js"></script>
 </head>
 <body>
     <div class="container">
@@ -97,8 +98,8 @@ $old_news = $query->all_news();
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <?php echo htmlspecialchars($article->pealkiri);?>
-                            <form method="post" action="post-new.php" id="news-delete">
-                                <button class="btn-danger" type="submit" id="news-delete-button" name="old_id" value="<?php echo $article->id;?>">Kustuta</button>
+                            <form method="post" action="post-new.php" class="news-delete">
+                                <button class="btn-danger news-delete-button" type="submit" name="old_id" value="<?php echo $article->id;?>">Kustuta</button>
                             </form>
                         </div>
                         <div class="panel-body">

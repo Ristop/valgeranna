@@ -50,7 +50,7 @@
     <div class="rooms">
         <div class="row">
             <div class="col-xs-4 col-md-3">
-                <img src="\pic\4.jpg" alt="Kahekohaline">
+                <img src=".\pic\4.jpg" alt="Kahekohaline">
             </div>
             <div class="col-xs-9 col-md-7">
                 <h2>Deluxe Double Room with Sea View</h2>
@@ -63,7 +63,7 @@
         </div>
         <div class="row">
             <div class="col-xs-4 col-md-3">
-                <img src="\pic\8.jpg" alt="Neljakohaline">
+                <img src=".\pic\8.jpg" alt="Neljakohaline">
             </div>
             <div class="col-xs-9 col-md-7">
                 <h2>Duplex Quadruple Room</h2>

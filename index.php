@@ -68,7 +68,7 @@ $old_news = $query->all_news();
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="\pic\2.jpg" alt="Active">
+                <img src=".\pic\2.jpg" alt="Active">
                 <div class="carousel-caption">
                     <h1>Valgeranna puhkekeskus</h1>
 
@@ -76,7 +76,7 @@ $old_news = $query->all_news();
             </div>
 
             <div class="item">
-                <img src="\pic\10.jpg" alt="First">
+                <img src=".\pic\10.jpg" alt="First">
                 <div class="carousel-caption">
                     <h3>Teine pilt</h3>
                     <p>Kiri teisel slaidil?</p>
@@ -84,7 +84,7 @@ $old_news = $query->all_news();
             </div>
 
             <div class="item">
-                <img src="\pic\1.jpg" alt="Third">
+                <img src=".\pic\1.jpg" alt="Third">
                 <div class="carousel-caption">
                     <h3>Kolmas pilt</h3>
                     <p>Kiri kolmandal slaidil?</p>

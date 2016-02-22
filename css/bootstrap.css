@@ -6757,3 +6757,50 @@ button.close {
     display: none !important;
   }
 }
+.newsPanel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
+}
+.newsPanel-heading {
+  font-weight: 600;
+}
+.newsPanel-footer{
+  font-weight: 200;
+  text-align: right;
+  font-style: italic;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}
+.carousel .item {
+  height: 500px;
+}
+
+.rooms .row {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
+}
+.rooms .row img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+
+}
+.rooms .row button {
+  padding: 14px 24px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 14px;
+  text-transform: uppercase;
+}

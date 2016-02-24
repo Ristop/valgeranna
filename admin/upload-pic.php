@@ -46,10 +46,18 @@
         </div>
     </nav>
 
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <h3>Lisa pilt! </h3>
+    <form action="upload-gallery.php" method="post" enctype="multipart/form-data">
+        <h3>Lisa pilt galeriisse </h3>
+        <input type="file" name="fileToUpload" id="fileToUpload">
         <br>
-        <br>
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+
+    <br>
+    <br>
+
+    <form action="upload-main.php" method="post" enctype="multipart/form-data">
+        <h3>Lisa pilt avalehele </h3>
         <input type="file" name="fileToUpload" id="fileToUpload">
         <br>
         <input type="submit" value="Upload Image" name="submit">

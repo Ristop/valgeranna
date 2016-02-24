@@ -58,7 +58,7 @@
             </div>
             <div class="col-xs-3 col-md-2">
                 <h3>Hind: 45 eur</h3>
-                <button>Broneeri tuba</button>
+                <button><a href="broneeri.php">Broneeri tuba</a></button>
             </div>
         </div>
         <div class="row">
@@ -71,7 +71,7 @@
             </div>
             <div class="col-xs-3 col-md-2">
                 <h3>Hind: 45 eur</h3>
-                <button>Broneeri tuba</button>
+                <button><a href="broneeri.php">Broneeri tuba</a></button>
             </div>
         </div>
     </div>

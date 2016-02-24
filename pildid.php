@@ -54,7 +54,28 @@
 
     <div class="row">
 
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <?php
+
+        $dir = './pic/gallery';
+        $file_display = array('jpg', 'jpeg', 'png', 'gif');
+
+        if (file_exists($dir) == false) {
+            echo 'Directory \'', $dir, '\' not found!';
+        } else {
+            $dir_contents = scandir($dir);
+
+            foreach ($dir_contents as $file) {
+                $file_type = strtolower(end(explode('.', $file)));
+
+                if ($file !== '.' && $file !== '..' && in_array($file_type, $file_display) == true)
+                {
+                    echo '<img src="', $dir, '/', $file, '" alt="', $file, '" />';
+                }
+            }
+        }
+        ?>
+
+        <!--<div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a class="thumbnail" href="./pic/1.jpg">
                 <img class="img-responsive" src="./pic/1.jpg" alt="1">
             </a>
@@ -112,7 +133,7 @@
             <a class="thumbnail" href="./pic/10.jpg">
                 <img class="img-responsive" src="./pic/10.jpg" alt="10">
             </a>
-        </div>
+        </div>-->
 
 
 

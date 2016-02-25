@@ -1,5 +1,6 @@
 <header>
     <nav>
+        <span class="menu-trigger">MENU</span>
         <div class="nav-menu">
             <a href="post-new.php" id="header-logo"><img src="../pic/logo.jpg"></a>
             <ul>

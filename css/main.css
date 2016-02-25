@@ -1,3 +1,7 @@
+body {
+    background-color: whitesmoke;
+}
+
 .news-delete-button{
     float: right;
     height: 20px;
@@ -14,17 +18,21 @@
 #map-container {
     height: 250px
 }
-
 /* Navigation Menu */
-
+nav {
+    font-family:"Roboto",sans-serif !important;
+    font-size: 21px;
+    margin-bottom: 0;
+}
 div.nav-menu{
     padding: 0 0;
-    height: 120px;
+    height: 130px;
+    margin-top: 10px;
 }
-
 div.nav-menu ul{
     margin:0;
     padding: 0;
+    text-align: center;
 }
 
 div.nav-menu ul li{
@@ -33,18 +41,30 @@ div.nav-menu ul li{
 }
 
 div.nav-menu ul li:first-child{
-    margin-left: 120px;
+    margin-left: 130px;
 }
+
+
 
 div.nav-menu ul li a:link,
 div.nav-menu ul li a:visited{
-    font-family: Roboto;
     display: block;
-    font-size: 21px;
-    padding: 10px 40px 10px 0;
+    padding: 10px 0px 10px 0;
+    margin-right: 40px;
     margin-top: 60px;
     text-decoration: none;
     color: black;
+}
+
+div.nav-menu ul li:last-child{
+    margin-right: 0px;
+    padding-right: 0;
+}
+
+div.nav-menu ul li a:hover{
+    color: #EF581F;
+    border-bottom: 1px solid #ef581f;
+    border-top: 1px solid #ef581f;
 }
 
 div.nav-menu ul li.active-link a{
@@ -53,13 +73,39 @@ div.nav-menu ul li.active-link a{
 
 div.nav-menu #header-logo{
     position: absolute;
-    top: 5px;
+    top: 15px;
 }
+.menu-trigger{
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .menu-trigger{
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 5px;
+        display: block;
+        color: white;
+        background-color: #ef581f;
+        text-align: right;
+        cursor: pointer;
+        padding: 10px;
+    }
 
-@media screen and (max-width: 480px){
+    div.nav-menu {
+        height: auto;
+        display: none;
+    }
+
+    div.nav-expanded {
+        display: block;
+    }
+
+    div.nav-menu ul{
+        text-align: left;
+    }
+
     div.nav-menu ul li{
         float: none;
-        border-bottom: 2px solid #EF581F;
+        border-bottom: 1px solid #ef581f;
     }
 
     div.nav-menu ul li:last-child{
@@ -72,6 +118,13 @@ div.nav-menu #header-logo{
     div.nav-menu a#header-logo{
         visibility: hidden;
         display: none;
+    }
+
+    div.nav-menu ul li a:link,
+    div.nav-menu ul li a:visited{
+        padding: 3px;
+        margin-top: 0;
+        margin-right: 0;
     }
 }
 

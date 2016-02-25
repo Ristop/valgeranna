@@ -13,6 +13,7 @@
     <![endif]-->
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="js/location-google-maps.js"></script>
+
 </head>
 <body>
 <div class="container">

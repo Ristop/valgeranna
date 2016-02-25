@@ -13,6 +13,9 @@ $old_news = $query->all_news();
     <?php include 'head.php'?>
 </head>
 <body>
+    <div class="container">
+        <?php include 'header.php'?>
+    </div>
     <!-- Here is main page images carousel -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->

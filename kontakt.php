@@ -50,8 +50,21 @@
         </div>
     </nav>
 </div>
-<div class="container-fluid">
-    <div id="map-container" class="col-md-12"></div>
+<div class="container-fluid col-md-12" id="map-container"></div>
+<div class="container">
+    <!-- Two columns of text below the google maps -->
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Võta meiega ühendust:</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-6">
+            <h3>Kontakt</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+    </div>
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

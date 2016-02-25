@@ -6,19 +6,10 @@
     <title>Valgeranna puhkekeskus</title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
@@ -50,101 +41,36 @@
         </div>
     </nav>
 
-
-
     <div class="row">
-
         <?php
-
         $dir = './pic/gallery';
         $file_display = array('jpg', 'jpeg', 'png', 'gif');
-
-        if (file_exists($dir) == false) {
+        if (file_exists($dir) == false) :
             echo 'Directory \'', $dir, '\' not found!';
-        } else {
+        else :
             $dir_contents = scandir($dir);
-
-            foreach ($dir_contents as $file) {
-                $file_type = strtolower(end(explode('.', $file)));
-
-                if ($file !== '.' && $file !== '..' && in_array($file_type, $file_display) == true)
-                {
-                    echo '<img src="', $dir, '/', $file, '" alt="', $file, '" />';
-                }
-            }
-        }
-        ?>
-
-        <!--<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/1.jpg">
-                <img class="img-responsive" src="./pic/1.jpg" alt="1">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/2.jpg">
-                <img class="img-responsive" src="./pic/2.jpg" alt="2">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/3.jpg">
-                <img class="img-responsive" src="./pic/3.jpg" alt="3">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/4.jpg">
-                <img class="img-responsive" src="./pic/4.jpg" alt="4">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/5.jpg">
-                <img class="img-responsive" src="./pic/5.jpg" alt="5">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/6.jpg">
-                <img class="img-responsive" src="./pic/6.jpg" alt="6">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/7.jpg">
-                <img class="img-responsive" src="./pic/7.jpg" alt="7">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/8.jpg">
-                <img class="img-responsive" src="./pic/8.jpg" alt="8">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/9.jpg">
-                <img class="img-responsive" src="./pic/9.jpg" alt="9">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="./pic/10.jpg">
-                <img class="img-responsive" src="./pic/10.jpg" alt="10">
-            </a>
-        </div>-->
-
+            foreach ($dir_contents as $file):
+                $explode = explode('.', $file);
+                $end = end($explode);
+                $file_type = strtolower($end);
+                if ($file !== '.' && $file !== '..' && in_array($file_type, $file_display) == true):?>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href=<?php echo "$dir/$file"?>>
+                            <img class="img-responsive" src=<?php echo "$dir/$file"?> alt=<?php echo"$file"?>>
+                        </a>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 
     <hr>
 
 </div>
 
-
 <script src="js/jquery.js"></script>
-
 <script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
 </body>
 

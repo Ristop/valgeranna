@@ -2,6 +2,25 @@ body {
     background-color: whitesmoke;
 }
 
+h1,h2,h3,h4,h5,h6{
+    color: #ef581f;
+}
+
+.thumbnail{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    max-height: 145px;
+}
+
+.thumbnail .img-responsive img{
+    flex-shrink:0;
+    min-width:100%;
+    min-height:100%;
+    margin: 0 0;
+}
+
 .news-delete-button{
     float: right;
     height: 20px;
@@ -66,7 +85,6 @@ div.nav-menu ul li:last-child{
 div.nav-menu ul li a:hover{
     color: white;
     background-color:  #EF581F;
-    border-top: 1px solid #ef581f;
 }
 
 div.nav-menu ul li.active-link a{
@@ -78,19 +96,22 @@ div.nav-menu #header-logo{
     top: 15px;
 }
 .menu-trigger{
+    margin: 0 -15px;
     display: none;
 }
 
 @media screen and (max-width: 740px){
     .menu-trigger{
-        border-bottom-right-radius: 4px;
-        border-bottom-left-radius: 5px;
         display: block;
         color: white;
         background-color: #ef581f;
         text-align: right;
         cursor: pointer;
         padding: 10px;
+    }
+
+    nav{
+        border-bottom: none;
     }
 
     div.nav-menu {
@@ -135,7 +156,7 @@ div.nav-menu #header-logo{
 
 /* End of Navigation Menu */
 
-/* Start of new panel */
+/* Start of news panel */
 
 .newsPanel {
     margin-bottom: 20px;
@@ -154,16 +175,17 @@ div.nav-menu #header-logo{
     font-style: italic;
 }
 
-/* End of new panel */
+/* End of news panel */
 
 /* Start of carousel */
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 .carousel .item {
-    height: 400px;
+    height: auto;
+    max-height: 400px;
 }
 
 /* End of carousel */
@@ -171,10 +193,13 @@ div.nav-menu #header-logo{
 
 /* Start of rooms */
 .rooms .row {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 20px 0;
+    margin-bottom: 20px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
+}
+.rooms .row:last-child{
+    margin-bottom: 0;
 }
 .rooms .row img {
     width: 100%;

@@ -1,6 +1,6 @@
 <header>
     <nav>
-        <span class="menu-trigger">MENU</span>
+        <span class="menu-trigger">MENÜÜ</span>
         <div class="nav-menu">
             <a href="index.php" id="header-logo"><img src="pic/logo.jpg"></a>
             <ul>

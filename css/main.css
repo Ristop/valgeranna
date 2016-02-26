@@ -22,17 +22,22 @@ body {
 nav {
     font-family:"Roboto",sans-serif !important;
     font-size: 21px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ef581f;
 }
 div.nav-menu{
     padding: 0 0;
     height: 130px;
     margin-top: 10px;
+    display: -webkit-flex;
+    position: relative;
 }
+
 div.nav-menu ul{
     margin:0;
     padding: 0;
-    text-align: center;
+    position: absolute;
+    bottom: 0;
 }
 
 div.nav-menu ul li{
@@ -44,26 +49,23 @@ div.nav-menu ul li:first-child{
     margin-left: 130px;
 }
 
-
-
 div.nav-menu ul li a:link,
 div.nav-menu ul li a:visited{
+    text-align: center;
     display: block;
-    padding: 10px 0px 10px 0;
-    margin-right: 40px;
-    margin-top: 60px;
+    padding: 10px 15px;
     text-decoration: none;
     color: black;
 }
 
 div.nav-menu ul li:last-child{
-    margin-right: 0px;
+    margin-right: 0;
     padding-right: 0;
 }
 
 div.nav-menu ul li a:hover{
-    color: #EF581F;
-    border-bottom: 1px solid #ef581f;
+    color: white;
+    background-color:  #EF581F;
     border-top: 1px solid #ef581f;
 }
 
@@ -78,7 +80,8 @@ div.nav-menu #header-logo{
 .menu-trigger{
     display: none;
 }
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 740px){
     .menu-trigger{
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 5px;
@@ -93,6 +96,7 @@ div.nav-menu #header-logo{
     div.nav-menu {
         height: auto;
         display: none;
+        position: relative;
     }
 
     div.nav-expanded {
@@ -101,6 +105,7 @@ div.nav-menu #header-logo{
 
     div.nav-menu ul{
         text-align: left;
+        position: relative;
     }
 
     div.nav-menu ul li{

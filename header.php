@@ -10,9 +10,6 @@
                 <li><a href="uudised.php">UUDISED</a></li>
                 <li><a href="kontakt.php">KONTAKT</a></li>
             </ul>
-            <ul class="navbar-right">
-                <li><a href="admin/post-new.php">ADMIN</a></li>
-            </ul>
         </div>
     </nav>
 </header>

@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhostt'),
+            'host'      => env('DB_HOST', 'us-cdbr-azure-west-c.cloudapp.net'),
             'database'  => env('DB_DATABASE', 'valgeranna'),
-            'username'  => env('DB_USERNAME', 'root'),
-            'password'  => env('DB_PASSWORD', 'Lambikas12'),
+            'username'  => env('DB_USERNAME', 'bc78f275d9a6e0'),
+            'password'  => env('DB_PASSWORD', '6074e2da'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

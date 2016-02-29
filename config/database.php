@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'valgeranna.database.windows.net'),
+            'host'      => env('DB_HOST', 'valgera.database.windows.net'),
             'database'  => env('DB_DATABASE', 'valgeranna'),
-            'username'  => env('DB_USERNAME', 'valgerannaadmin'),
-            'password'  => env('DB_PASSWORD', 'valgeranna12'),
+            'username'  => env('DB_USERNAME', 'valgeadmin'),
+            'password'  => env('DB_PASSWORD', 'Valgeranna12'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

@@ -52,18 +52,32 @@ return [
             'prefix'   => '',
         ],
 
+        // For localhost usage :
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'us-cdbr-azure-west-c.cloudapp.net'),
+            'host'      => env('DB_HOST', 'localhost'),
             'database'  => env('DB_DATABASE', 'valgeranna'),
-            'username'  => env('DB_USERNAME', 'bc78f275d9a6e0'),
-            'password'  => env('DB_PASSWORD', '6074e2da'),
+            'username'  => env('DB_USERNAME', 'root'),
+            'password'  => env('DB_PASSWORD', 'Lambikas12'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => false,
             'engine'    => null,
         ],
+        // For server usage :
+        /*''mysql' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST', 'eu-cdbr-azure-north-d.cloudapp.net'),
+            'database'  => env('DB_DATABASE', 'valgeranna'),
+            'username'  => env('DB_USERNAME', 'b4897b3812bde5'),
+            'password'  => env('DB_PASSWORD', '2e10fbe4'),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+            'engine'    => null,
+        ],*/
 
         'pgsql' => [
             'driver'   => 'pgsql',

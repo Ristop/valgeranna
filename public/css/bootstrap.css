@@ -201,13 +201,13 @@ th {
     a,
     a:visited {
         text-decoration: underline;
-    }
+    }/*
     a[href]:after {
         content: " (" attr(href) ")";
     }
     abbr[title]:after {
         content: " (" attr(title) ")";
-    }
+    }*/
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -2520,7 +2520,7 @@ input[type="search"] {
 input[type="radio"],
 input[type="checkbox"] {
     margin: 4px 0 0;
-    margin-top: 1px \9;
+    margin-top: 1px;
     line-height: normal;
 }
 input[type="file"] {
@@ -2602,6 +2602,7 @@ textarea.form-control {
 input[type="search"] {
     -webkit-appearance: none;
 }
+/*
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     input[type="date"].form-control,
     input[type="time"].form-control,
@@ -2629,7 +2630,7 @@ input[type="search"] {
     .input-group-lg input[type="month"] {
         line-height: 46px;
     }
-}
+}*/
 .form-group {
     margin-bottom: 15px;
 }
@@ -2653,7 +2654,7 @@ input[type="search"] {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
     position: absolute;
-    margin-top: 4px \9;
+    margin-top: 4px;
     margin-left: -20px;
 }
 .radio + .radio,
@@ -2796,7 +2797,7 @@ select[multiple].input-lg {
     height: 34px;
     line-height: 34px;
     text-align: center;
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 .input-lg + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
@@ -3012,13 +3013,13 @@ select[multiple].input-lg {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
+    /*-ms-touch-action: manipulation;*/
+    /*touch-action: manipulation;*/
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -3057,7 +3058,7 @@ fieldset[disabled] .btn {
 }
 a.btn.disabled,
 fieldset[disabled] a.btn {
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 .btn-default {
     color: #333;
@@ -3509,7 +3510,7 @@ tbody.collapse.in {
     margin-left: 2px;
     vertical-align: middle;
     border-top: 4px dashed;
-    border-top: 4px solid \9;
+    border-top: 4px solid;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
 }
@@ -3580,6 +3581,7 @@ tbody.collapse.in {
 .dropdown-menu > .disabled > a:focus {
     color: #777;
 }
+/*
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
     text-decoration: none;
@@ -3587,7 +3589,7 @@ tbody.collapse.in {
     background-color: transparent;
     background-image: none;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
+}*/
 .open > .dropdown-menu {
     display: block;
 }
@@ -3627,7 +3629,7 @@ tbody.collapse.in {
     content: "";
     border-top: 0;
     border-bottom: 4px dashed;
-    border-bottom: 4px solid \9;
+    border-bottom: 4px solid;
 }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
@@ -3814,7 +3816,7 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 .input-group {
     position: relative;
@@ -5102,6 +5104,7 @@ a.thumbnail.active {
 .alert-danger .alert-link {
     color: #843534;
 }
+/*
 @-webkit-keyframes progress-bar-stripes {
     from {
         background-position: 40px 0;
@@ -5125,7 +5128,7 @@ a.thumbnail.active {
     to {
         background-position: 0 0;
     }
-}
+}*/
 .progress {
     height: 20px;
     margin-bottom: 20px;
@@ -5205,7 +5208,7 @@ a.thumbnail.active {
 .media,
 .media-body {
     overflow: hidden;
-    zoom: 1;
+    /*zoom: 1;*/
 }
 .media-body {
     width: 10000px;
@@ -6256,6 +6259,7 @@ button.close {
 .carousel-inner > .item > a > img {
     line-height: 1;
 }
+/*
 @media all and (transform-3d), (-webkit-transform-3d) {
     .carousel-inner > .item {
         -webkit-transition: -webkit-transform .6s ease-in-out;
@@ -6286,7 +6290,7 @@ button.close {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
-}
+}*/
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
@@ -6333,20 +6337,22 @@ button.close {
 }
 .carousel-control.left {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-    background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
-    background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    /*uncomment after the course is over*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);*/
     background-repeat: repeat-x;
 }
 .carousel-control.right {
     right: 0;
     left: auto;
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-    background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
-    background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    /*uncomment after the course is over*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);*/
     background-repeat: repeat-x;
 }
 .carousel-control:hover,
@@ -6408,7 +6414,7 @@ button.close {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000 \9;
+    background-color: #000;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     border-radius: 10px;
@@ -6535,7 +6541,7 @@ button.close {
     visibility: hidden;
 }
 .text-hide {
-    font: 0/0 a;
+    /*font: 0/0 a;*/
     color: transparent;
     text-shadow: none;
     background-color: transparent;
@@ -6546,10 +6552,10 @@ button.close {
 }
 .affix {
     position: fixed;
-}
+}/*
 @-ms-viewport {
     width: device-width;
-}
+}*/
 .visible-xs,
 .visible-sm,
 .visible-md,

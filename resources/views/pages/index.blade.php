@@ -21,14 +21,14 @@
                 <div class="item">
                     <img src={{URL::asset('img/main/10.jpg')}} alt="First">
                     <div class="carousel-caption">
-                        <h3>Teine pilt</h3>
+                        <h2>Teine pilt</h2>
                         <p>Kiri teisel slaidil?</p>
                     </div>
                 </div>
                 <div class="item">
                     <img src={{URL::asset('img/main/1.jpg')}} alt="Third">
                     <div class="carousel-caption">
-                        <h3>Kolmas pilt</h3>
+                        <h2>Kolmas pilt</h2>
                         <p>Kiri kolmandal slaidil?</p>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                 @foreach($posts as $post)
                     <div class="newsPanel">
                         <div class="newsPanel-heading">
-                            <a href={{'/posts/'.$post->id}}><h5>{{$post->title}}</h5></a>
+                            <a href={{'/posts/'.$post->id}}><h4>{{$post->title}}</h4></a>
                         </div>
                         <div class="newsPanel-body">
                             {{substr($post->content, 0, 100)}}

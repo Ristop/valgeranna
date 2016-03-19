@@ -14,5 +14,5 @@ return [
     'contactUs' => 'Võta meiega ühendust',
     'contact' => 'Kontakt',
     'howToContact' => 'Saada kiri meiliaadressile...',
-    'contactInfo' => 'Asume Pärnu lähedal.'
+    'contactInfo' => 'Asume Pärnu lähedal...'
 ];

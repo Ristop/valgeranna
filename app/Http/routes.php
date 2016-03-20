@@ -11,27 +11,7 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
 
-Route::get('/contact', 'PagesController@contact');
-
-Route::get('/posts', 'PagesController@posts');
-
-Route::get('/posts/{id}', 'PagesController@post');
-
-Route::get('/pictures', 'PagesController@pictures');
-
-Route::get('/reserve', 'PagesController@reserve');
-
-Route::get('/rooms', 'PagesController@rooms');
-
-Route::get('/admin', 'PagesController@adminNewPost');
-
-Route::get('/admin/newPost', 'PagesController@adminNewPost');
-
-Route::post('/admin/addnew','PagesController@addNewPost');
-
-Route::post('/admin/delete','PagesController@deletePost');
 
 
 /*
@@ -46,5 +26,25 @@ Route::post('/admin/delete','PagesController@deletePost');
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('/', 'PagesController@home');
+
+    Route::get('/contact', 'PagesController@contact');
+
+    Route::get('/posts', 'PostsController@posts');
+
+    Route::get('/posts/{id}', 'PostsController@post');
+
+    Route::get('/pictures', 'PagesController@pictures');
+
+    Route::get('/reserve', 'PagesController@reserve');
+
+    Route::get('/rooms', 'PagesController@rooms');
+
+    Route::get('/admin', 'PostsController@adminNewPost');
+
+    Route::get('/admin/newPost', 'PostsController@adminNewPost');
+
+    Route::post('/admin/addnew','PostsController@addNewPost');
+
+    Route::post('/admin/delete','PostsController@deletePost');
 });

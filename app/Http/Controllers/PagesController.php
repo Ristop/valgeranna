@@ -62,4 +62,5 @@ class PagesController extends Controller
         Post::destroy($request->id);
         return back();
     }
+
 }

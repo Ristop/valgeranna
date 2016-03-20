@@ -29,6 +29,9 @@ class PostsController extends Controller
     // Get all posts for the admin page
     public function adminNewPost()
     {
+        if (Auth::guest()){
+            return view('auth.login');
+        }
         $posts = Post::with('user')->get();
 
         return view('admin-pages.admin-new-post', compact('posts'));
@@ -36,6 +39,9 @@ class PostsController extends Controller
 
     // Add new post on the admin page
     public function addNewPost(Request $request){
+        if (Auth::guest()){
+            return view('auth.login');
+        }
         $this->validate($request, [
             'title' => 'required|min:10',
             'content' => 'required|min:10'
@@ -51,6 +57,9 @@ class PostsController extends Controller
 
     // Delete post
     public function deletePost(Request $request){
+        if (Auth::guest()){
+            return view('auth.login');
+        }
         Post::destroy($request->id);
         return back();
     }

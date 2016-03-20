@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     @include('layouts.head')
 </head>
 <body>
-    @include('layouts.admin-header')
-    @yield('content')
+    @if (Auth::guest())
+        @yield('loginData')
+    @else
+        @include('layouts.admin-header')
+        @yield('content')
+    @endif
 </body>
 </html>

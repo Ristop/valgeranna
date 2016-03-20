@@ -33,4 +33,20 @@ class PagesController extends Controller
     {
         return view('pages.rooms');
     }
+
+    public function login()
+    {
+        return view('auth.login');
+    }
+
+    public function register()
+    {
+        return view('admin-pages.register');
+    }
+
+    public function reset()
+    {
+        return view('auth.passwords.reset');
+    }
+
 }

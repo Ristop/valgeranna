@@ -48,8 +48,8 @@ class PostsController extends Controller
         ]);
 
         $post = new Post($request->all());
-        //$post->by(Auth::user());
-        $post->user_id = 1;
+        $post->by(Auth::user());
+        //$post->user_id = 1;
         $post->save();
         //Post::create(['content' => $request->content, 'title'=>$request->title]);
         return back();

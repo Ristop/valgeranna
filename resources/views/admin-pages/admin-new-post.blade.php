@@ -69,7 +69,7 @@
                         {{$post->content}}
                     </div>
                     @if(!is_null($post->user))
-                        <div class="newsPanel-footer">Posted by <b>{{$post->user->username}}</b>
+                        <div class="newsPanel-footer">Posted by <b>{{$post->user->name}}</b>
                             on {{$post->created_at}}
                         </div>
                     @else

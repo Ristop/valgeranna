@@ -49,17 +49,17 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-sm-4">
-                <h3>Tutvustus</h3>
+                <h3> <?php echo trans('main.aboutUs'); ?> </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
             </div>
             <div class="col-sm-4">
-                <h3>Muljed</h3>
+                <h3> <?php echo trans('main.feedback'); ?> </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
             </div>
             <div class="col-sm-4">
-                <h3>Uudised</h3>
+                <h3> <?php echo trans('main.posts'); ?> </h3>
                 @foreach($posts as $post)
                     <div class="newsPanel">
                         <div class="newsPanel-heading">

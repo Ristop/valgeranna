@@ -15,6 +15,6 @@ return [
     'pictures' => 'KUVAGALLERIA',
     'reserve' => 'VARAUS',
     'posts' => 'UUTISET',
-    'contact' => 'YHTEYSTIEDOT'
-
+    'contact' => 'YHTEYSTIEDOT',
+    'lang' => 'Valitse kieli'
 ];

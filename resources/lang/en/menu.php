@@ -15,6 +15,7 @@ return [
     'pictures' => 'GALLERY',
     'reserve' => 'RESERVE A ROOM',
     'posts' => 'NEWS',
-    'contact' => 'CONTACT'
+    'contact' => 'CONTACT',
+    'lang' => 'Select language'
 
 ];

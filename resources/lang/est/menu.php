@@ -15,6 +15,7 @@ return [
     'pictures' => 'GALERII',
     'reserve' => 'BRONEERI',
     'posts' => 'UUDISED',
-    'contact' => 'KONTAKT'
+    'contact' => 'KONTAKT',
+    'lang' => 'Vali keel'
 
 ];

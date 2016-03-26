@@ -1,23 +1,23 @@
 <div class="container">
     <header>
         <nav>
-
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> <?php echo trans('menu.lang'); ?> <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            {{ Config::get('languages')[App::getLocale()] }}
-                        </a>
-                    </li>
-                    @foreach (Config::get('languages') as $lang => $language)
-                        @if ($lang != App::getLocale())
-                            <li>
-                                <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
-                            </li>
-                        @endif
-                    @endforeach
-                </ul>
+            <div class="dropdown flag">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="/img/flags/{{ \App::getLocale() }}_flag.png">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-position">
+                        @foreach (Config::get('languages') as $lang => $language)
+                            @if ($lang != App::getLocale())
+                                <li>
+                                    <a href="{{ route('lang.switch', $lang) }}">
+                                        <img src="/img/flags/{{ $lang }}_flag.png"> {{$language}}
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
             </div>
 
             <span class="menu-trigger">MENÜÜ</span>

@@ -13,7 +13,7 @@ return [
 
     'rooms' => 'ROOMS',
     'pictures' => 'GALLERY',
-    'reserve' => 'RESERVE A ROOM',
+    'reserve' => 'RESERVE',
     'posts' => 'NEWS',
     'contact' => 'CONTACT',
     'lang' => 'Select language'

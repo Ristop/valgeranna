@@ -4,7 +4,7 @@
             <a href={{'/posts/'.$post->id}}><h4>{{$post->title}}</h4></a>
         </div>
         <div class="newsPanel-body">
-            {{$post->content}}
+            <p>{{$post->content}}</p>
         </div>
         <div class="newsPanel-footer">{{$post->created_at}}</div>
     </div>

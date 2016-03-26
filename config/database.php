@@ -66,7 +66,7 @@ return [
             'engine'    => null,
         ],
         // For server usage :
-        /*''mysql' => [
+        /*'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'eu-cdbr-azure-north-d.cloudapp.net'),
             'database'  => env('DB_DATABASE', 'valgeranna'),

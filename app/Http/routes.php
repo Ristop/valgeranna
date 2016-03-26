@@ -46,6 +46,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/admin/addnew','PostsController@addNewPost');
 
+    Route::post('/admin/edit/{id}', 'PostsController@editPost');
+
     Route::post('/admin/delete','PostsController@deletePost');
 
     Route::get('/admin/register','PagesController@register');

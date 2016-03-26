@@ -55,6 +55,13 @@ class PostsController extends Controller
         return back();
     }
 
+    public function editPost(Request $request, $id) {
+        $post = Post::find($id);
+        $post->content = $request->content;
+        $post->save();
+        return back();
+    }
+
     // Delete post
     public function deletePost(Request $request){
         if (Auth::guest()){

@@ -161,6 +161,7 @@ div.nav-menu #header-logo {
 /* End of Navigation Menu */
 /* Start of news panel */
 .newsPanel {
+  position: relative;
   padding: 2px 5px 5px;
   margin: 15px 0;
   border-left: 1px solid #ef581f;
@@ -222,8 +223,13 @@ div.nav-menu #header-logo {
   letter-spacing: 1px;
   border-radius: 14px;
   text-transform: uppercase; }
-
 /* End of rooms */
+
+/*Start of edit post style */
+.editForm input {
+  padding-left: 0;
+  position: inherit;
+}
 /* Start of log in page*/
 /* End of log in page*/
 

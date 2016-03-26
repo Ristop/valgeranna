@@ -48,12 +48,12 @@
 
                 <div class="newsPanel">
                     <div class="row pull-right">
-                        <form class="col-sm-6 col-xs-6" method="post" action="/admin/delete">
+                        <div class="col-sm-6 col-xs-6" >
                             {{csrf_field()}}
-                            <button class="btn btn-group-sm btn-info" type="submit" name="id" value={{$post->id}} >
+                            <button  class="btn btn-group-sm btn-info edit-button" id={{'edit-'.$post->id}} name="id" value={{$post->id}} >
                                 Muuda
                             </button>
-                        </form>
+                        </div>
                         <form class="col-sm-6 col-xs-6" method="post" action="/admin/delete">
                             {{csrf_field()}}
                             <button class="btn btn-group-sm btn-danger" type="submit" name="id" value={{$post->id}} >
@@ -65,9 +65,16 @@
                     <div class="newsPanel-heading">
                         <a href={{'/posts/'.$post->id}}><h4>{{$post->title}}</h4></a>
                     </div>
-                    <div class="newsPanel-body">
+                    <div class="newsPanel-body" id={{'post-'.$post->id}}>
                         {{$post->content}}
                     </div>
+                    <form class="form-group col-sm-6 col-xs-6 hidden editForm" method='post' action={{'/admin/edit/' . $post->id}} id={{'form-'.$post->id}}>
+                        {{csrf_field()}}
+                        <input class="form-control" type='text' name="content">
+
+                        </input>
+                        <button class="btn btn-group-sm btn-success" type="submit">Salvesta</button>
+                    </form>
                     @if(!is_null($post->user))
                         <div class="newsPanel-footer">Posted by <b>{{$post->user->name}}</b>
                             on {{$post->created_at}}

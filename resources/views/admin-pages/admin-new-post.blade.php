@@ -39,13 +39,34 @@
             <div class="alert alert-success" role="alert">Uudis edukalt lisatud!</div>
         @endif
 
+        <h3>Postituste statistika</h3>
+        <table class = "table table-bordered">
+            <thead>
+                <tr>
+                    <th>Kasutaja</th>
+                    <th>Postituste arv</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $postStats = DB::select(DB::raw("SELECT users.name, COUNT(*) as postNr FROM users JOIN posts ON users.id=posts.user_id GROUP BY users.name"));
+                ?>
+                    @foreach($postStats as $stat)
+                    <tr>
+                        <th> <?php echo $stat -> name ?> </th>
+                        <th> <?php echo $stat -> postNr ?> </th>
+                    </tr>
+                    @endforeach
+            </tbody>
+        </table>
+
+
         @if(isset($posts) and count($posts) != 0)
             <h3>Varasemad postitused</h3>
         @endif
 
         @foreach($posts as $post)
             <div class="col-sm-12 col-xs-12">
-
                 <div class="newsPanel">
                     <div class="row pull-right">
                         <div class="col-sm-6 col-xs-6" >

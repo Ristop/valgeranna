@@ -9,13 +9,14 @@ use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PostsController extends Controller
 {
     // Get all posts for the post page
     public function posts()
     {
-        $posts = Post::all();
+        $posts = DB::select(DB::raw("SELECT * FROM posts"));
         return view('pages.news', compact('posts'));
     }
 
@@ -70,4 +71,5 @@ class PostsController extends Controller
         Post::destroy($request->id);
         return back();
     }
+
 }

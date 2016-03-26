@@ -48,10 +48,21 @@ class PostsController extends Controller
             'content' => 'required|min:10'
         ]);
 
+
+/*      SQL:
+        DB::table('posts') -> insert(
+            array('user_id' => Auth::id(),
+                'title' => $request-> title,
+                'content' => $request -> content)
+        );*/
+
+
+
         $post = new Post($request->all());
         $post->by(Auth::user());
-        //$post->user_id = 1;
         $post->save();
+
+
         //Post::create(['content' => $request->content, 'title'=>$request->title]);
         return back();
     }

@@ -5,6 +5,7 @@
     @include('layouts.head')
 </head>
 <body>
+
     @if (Auth::guest())
         @yield('loginData')
     @else

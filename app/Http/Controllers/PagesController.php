@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
@@ -41,6 +42,9 @@ class PagesController extends Controller
 
     public function register()
     {
+        if (Auth::guest()){
+            return view('auth.login');
+        }
         return view('admin-pages.register');
     }
 

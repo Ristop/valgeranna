@@ -1,5 +1,4 @@
-
-$mainOrange:  #ef581f;
+$mainOrange: #ef581f;
 
 body {
   background-color: whitesmoke;
@@ -9,41 +8,41 @@ a:hover {
   text-decoration: none;
 }
 
-li{
+li {
   list-style-type: none;
 }
 
 p {
-  font-family:"Roboto",sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   text-align: justify;
   text-justify: inter-word;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family:"Roboto",sans-serif !important;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif !important;
   color: $mainOrange;
 }
 
-h4{
+h4 {
   font-size: 14px;
 }
 
-.thumbnail{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow:hidden;
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   max-height: 145px;
 }
 
-.thumbnail .img-responsive img{
-  flex-shrink:0;
-  min-width:100%;
-  min-height:100%;
+.thumbnail .img-responsive img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
   margin: 0 0;
 }
 
-.news-delete-button{
+.news-delete-button {
   float: right;
   height: 20px;
   font-size: 10px;
@@ -51,7 +50,7 @@ h4{
   border-color: $mainOrange;
 }
 
-.news-delete{
+.news-delete {
   margin: 0;
   float: right;
 }
@@ -59,18 +58,20 @@ h4{
 #map-container {
   height: 250px
 }
+
 /* Navigation Menu */
-ul{
+ul {
   margin-bottom: 0;
 }
 
 nav {
-  font-family:"Roboto",sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   font-size: 21px;
   margin-bottom: 10px;
   border-bottom: 1px solid $mainOrange;
 }
-div.nav-menu{
+
+div.nav-menu {
   padding: 0 0;
   height: 130px;
   margin-top: 10px;
@@ -78,20 +79,20 @@ div.nav-menu{
   position: relative;
 }
 
-div.nav-menu ul{
-  margin-left:130px;
+div.nav-menu ul {
+  margin-left: 130px;
   padding: 0;
   position: absolute;
   bottom: 0;
 }
 
-div.nav-menu ul li{
+div.nav-menu ul li {
   list-style: none;
   float: left;
 }
 
 div.nav-menu ul li a:link,
-div.nav-menu ul li a:visited{
+div.nav-menu ul li a:visited {
   text-align: center;
   display: block;
   padding: 10px 15px;
@@ -99,48 +100,55 @@ div.nav-menu ul li a:visited{
   color: black;
 }
 
-div.nav-menu ul li:last-child{
+div.nav-menu ul li:last-child {
   margin-right: 0;
   padding-right: 0;
 }
 
-div.nav-menu ul li a:hover{
+div.nav-menu ul li a:hover {
   color: white;
   background-color: $mainOrange;
 }
 
-div.nav-menu ul li.active-link a{
+div.nav-menu ul li.active-link a {
   color: white;
-  background-color:  $mainOrange;
+  background-color: $mainOrange;
 }
 
-div.nav-menu #header-logo{
+div.nav-menu #header-logo {
   position: absolute;
   top: 15px;
 }
-.menu-trigger{
+
+.menu-trigger {
   margin: 0 -15px;
   display: none;
 }
-.flag{
+
+.flag {
   float: right;
 }
+
 .dropdown-menu-position {
   right: 0;
   left: auto;
 }
 
-@media screen and (max-width: 550px){
-  .menu-trigger{
+@media screen and (max-width: 550px) {
+  .carousel-caption{
+    text-align: center;
+    top: 0;
+  }
+  .menu-trigger {
     display: block;
     color: white;
-    background-color:$mainOrange;
+    background-color: $mainOrange;
     text-align: right;
     cursor: pointer;
     padding: 10px;
   }
 
-  nav{
+  nav {
     border-bottom: none;
   }
 
@@ -154,37 +162,37 @@ div.nav-menu #header-logo{
     display: block;
   }
 
-  div.nav-menu ul{
+  div.nav-menu ul {
     margin-left: 0;
     text-align: left;
     position: relative;
   }
 
-  div.nav-menu ul li{
+  div.nav-menu ul li {
     float: none;
     border-bottom: 1px solid $mainOrange;
   }
 
-  div.nav-menu ul li:last-child{
+  div.nav-menu ul li:last-child {
     border-bottom: none;
   }
 
-  div.nav-menu ul li:first-child{
+  div.nav-menu ul li:first-child {
     margin-left: 0;
   }
-  div.nav-menu a#header-logo{
+  div.nav-menu a#header-logo {
     visibility: hidden;
     display: none;
   }
 
   div.nav-menu ul li a:link,
-  div.nav-menu ul li a:visited{
+  div.nav-menu ul li a:visited {
     padding: 3px;
     margin-top: 0;
     margin-right: 0;
   }
 
-  .flag{
+  .flag {
     padding-top: 10px;
     float: left;
   }
@@ -196,7 +204,30 @@ div.nav-menu #header-logo{
 }
 
 /* End of Navigation Menu */
+/* Start of panel panel */
+.welcomeContainer {
+  border-top: 1px solid $mainOrange;
+  margin-top: 13px;
+  padding-bottom: 15px;
+}
 
+.welcomeContainer-heading {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.welcomeContainer-body {
+
+}
+
+.imageContainer {
+  border-radius: 20px;
+  width: 500px;
+  height: 150px;
+  overflow: hidden;
+}
+
+/* End of welcome panell */
 /* Start of news panel */
 
 .newsPanel {
@@ -208,28 +239,29 @@ div.nav-menu #header-logo{
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
 }
+
 .newsPanel-heading {
   padding-top: 0;
-  font-family:"Roboto",sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   border-bottom: 1px solid darkgray;
   padding-bottom: 5px;
   font-weight: 600;
 }
 
-.newsPanel-body{
+.newsPanel-body {
   padding-top: 5px;
 
 }
 
-.newsPanel-footer{
+.newsPanel-footer {
   padding-top: 5px;
   font-weight: 200;
   text-align: right;
   font-style: italic;
 }
 
-.newsSidebar{
-  vertical-align:top;
+.newsSidebar {
+  vertical-align: top;
   background-color: #00AA00;
 }
 
@@ -240,14 +272,17 @@ div.nav-menu #header-logo{
 .carousel-inner > .item > a > img {
   width: 100%;
   margin: auto;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  overflow: hidden;
 }
+
 .carousel .item {
   height: auto;
-  max-height: 400px;
+  max-height: 250px;
 }
 
 /* End of carousel */
-
 
 /* Start of rooms */
 .rooms .row {
@@ -256,9 +291,11 @@ div.nav-menu #header-logo{
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
 }
-.rooms .row:last-child{
+
+.rooms .row:last-child {
   margin-bottom: 0;
 }
+
 .rooms .row img {
   width: 100%;
   border-radius: 10px;
@@ -266,6 +303,7 @@ div.nav-menu #header-logo{
   margin: 0 auto;
 
 }
+
 .rooms .row button {
   padding: 14px 24px;
   border: 0 none;
@@ -274,6 +312,7 @@ div.nav-menu #header-logo{
   border-radius: 14px;
   text-transform: uppercase;
 }
+
 /* End of rooms */
 
 /* Start of log in page*/

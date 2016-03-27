@@ -24,7 +24,7 @@ class PostsController extends Controller
     // Get post by the id
     public function post($id)
     {
-        $post = Post::all()->get($id-1);
+        $post = Post::findOrFail($id);
         return view('pages.singlePost', compact('post'));
     }
 
@@ -57,8 +57,6 @@ class PostsController extends Controller
                 'content' => $request -> content)
         );*/
 
-
-
         $post = new Post($request->all());
         $post->by(Auth::user());
         $post->save();
@@ -69,6 +67,9 @@ class PostsController extends Controller
     }
 
     public function editPost(Request $request, $id) {
+        if (Auth::guest()){
+            return view('auth.login');
+        }
         $post = Post::find($id);
         $post->content = $request->content;
         $post->save();
@@ -80,6 +81,7 @@ class PostsController extends Controller
         if (Auth::guest()){
             return view('auth.login');
         }
+
         Post::destroy($request->id);
         return back();
     }

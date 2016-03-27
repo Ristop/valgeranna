@@ -13,5 +13,5 @@ return [
 
     'posts' => 'Uudised',
     'feedback' => 'Muljed',
-    'aboutUs' => 'Tutvustus'
+    'aboutUs' => 'Meist'
 ];

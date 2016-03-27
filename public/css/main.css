@@ -8,12 +8,12 @@ li {
   list-style-type: none; }
 
 p {
-  font-family: "Roboto",sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   text-align: justify;
   text-justify: inter-word; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto",sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   color: #ef581f; }
 
 h4 {
@@ -59,7 +59,7 @@ ul {
   margin-bottom: 0; }
 
 nav {
-  font-family: "Roboto",sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   font-size: 21px;
   margin-bottom: 10px;
   border-bottom: 1px solid #ef581f; }
@@ -117,6 +117,9 @@ div.nav-menu #header-logo {
   left: auto; }
 
 @media screen and (max-width: 550px) {
+  .carousel-caption {
+    text-align: center;
+    top: 0; }
   .menu-trigger {
     display: block;
     color: white;
@@ -159,9 +162,25 @@ div.nav-menu #header-logo {
     left: 0; } }
 
 /* End of Navigation Menu */
+/* Start of panel panel */
+.welcomeContainer {
+  border-top: 1px solid #ef581f;
+  margin-top: 13px;
+  padding-bottom: 15px; }
+
+.welcomeContainer-heading {
+  text-align: center;
+  vertical-align: middle; }
+
+.imageContainer {
+  border-radius: 20px;
+  width: 500px;
+  height: 150px;
+  overflow: hidden; }
+
+/* End of welcome panell */
 /* Start of news panel */
 .newsPanel {
-  position: relative;
   padding: 2px 5px 5px;
   margin: 15px 0;
   border-left: 1px solid #ef581f;
@@ -171,7 +190,7 @@ div.nav-menu #header-logo {
 
 .newsPanel-heading {
   padding-top: 0;
-  font-family: "Roboto",sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   border-bottom: 1px solid darkgray;
   padding-bottom: 5px;
   font-weight: 600; }
@@ -194,11 +213,14 @@ div.nav-menu #header-logo {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  overflow: hidden; }
 
 .carousel .item {
   height: auto;
-  max-height: 400px; }
+  max-height: 250px; }
 
 /* End of carousel */
 /* Start of rooms */
@@ -223,13 +245,8 @@ div.nav-menu #header-logo {
   letter-spacing: 1px;
   border-radius: 14px;
   text-transform: uppercase; }
-/* End of rooms */
 
-/*Start of edit post style */
-.editForm input {
-  padding-left: 0;
-  position: inherit;
-}
+/* End of rooms */
 /* Start of log in page*/
 /* End of log in page*/
 

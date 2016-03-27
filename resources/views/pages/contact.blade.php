@@ -15,4 +15,7 @@
             </div>
         </div>
     </div>
+    <script src="http://maps.google.com/maps/api/js?sensor=false" defer></script>
+    <script src={{URL::asset('/js/location-google-maps.js')}} defer></script>
+
 @stop

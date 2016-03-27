@@ -53,7 +53,7 @@ return [
         ],
 
         // For localhost usage :
-        'mysql' => [
+        /*'mysql' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'database'  => 'valgeranna',
@@ -64,9 +64,9 @@ return [
             'prefix'    => '',
             'strict'    => false,
             'engine'    => null,
-        ],
+        ],*/
         // For server usage :
-        /*'mysql' => [
+        'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'eu-cdbr-azure-north-d.cloudapp.net'),
             'database'  => env('DB_DATABASE', 'valgeranna'),
@@ -77,7 +77,7 @@ return [
             'prefix'    => '',
             'strict'    => false,
             'engine'    => null,
-        ],*/
+        ],
 
         'pgsql' => [
             'driver'   => 'pgsql',

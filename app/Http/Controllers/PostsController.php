@@ -16,6 +16,7 @@ class PostsController extends Controller
     // Get all posts for the post page
     public function posts()
     {
+        //$posts = Post::all();
         $posts = DB::select(DB::raw("SELECT * FROM posts"));
         return view('pages.news', compact('posts'));
     }

@@ -9,13 +9,14 @@ use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PostsController extends Controller
 {
     // Get all posts for the post page
     public function posts()
     {
-        $posts = Post::all();
+        $posts = DB::select(DB::raw("SELECT * FROM posts"));
         return view('pages.news', compact('posts'));
     }
 
@@ -47,11 +48,29 @@ class PostsController extends Controller
             'content' => 'required|min:10'
         ]);
 
+
+/*      SQL:
+        DB::table('posts') -> insert(
+            array('user_id' => Auth::id(),
+                'title' => $request-> title,
+                'content' => $request -> content)
+        );*/
+
+
+
         $post = new Post($request->all());
         $post->by(Auth::user());
-        //$post->user_id = 1;
         $post->save();
+
+
         //Post::create(['content' => $request->content, 'title'=>$request->title]);
+        return back();
+    }
+
+    public function editPost(Request $request, $id) {
+        $post = Post::find($id);
+        $post->content = $request->content;
+        $post->save();
         return back();
     }
 
@@ -63,4 +82,5 @@ class PostsController extends Controller
         Post::destroy($request->id);
         return back();
     }
+
 }

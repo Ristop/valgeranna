@@ -25,7 +25,7 @@ class PagesController extends Controller
         return view('pages.pictures');
     }
 
-    public function entertainment()
+    public function pastime()
     {
         return view('pages.pastime');
     }

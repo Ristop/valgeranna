@@ -10,8 +10,9 @@ return [
     | The following language lines are used to change main page
     |
     */
-
+    
     'posts' => 'Uudised',
     'feedback' => 'Muljed',
-    'aboutUs' => 'Meist'
+    'aboutUs' => 'Meist',
+    'reserve' => 'Broneeri kohe'
 ];

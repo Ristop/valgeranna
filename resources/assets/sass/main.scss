@@ -125,6 +125,10 @@ div.nav-menu #header-logo {
   display: none;
 }
 
+.home-link {
+  display: none;
+}
+
 .flag {
   float: right;
 }
@@ -133,14 +137,22 @@ div.nav-menu #header-logo {
   right: 0;
   left: auto;
 }
-@media (max-width: 550px), only screen and (max-device-width: 550px) {
-  .container{
 
-  }
-  .carousel-caption{
+.carousel-caption {
+  bottom: 0;
+}
+
+@media (max-width: 550px), only screen and (max-device-width: 550px) {
+  .carousel-caption {
     text-align: center;
-    top: 0;
+    bottom: 0;
   }
+  .carousel-caption h1 a:link, .carousel-caption h1 a:visited, .carousel-caption h1 a:hover, .carousel-caption h1 a:active {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+
   .menu-trigger {
     display: block;
     color: white;
@@ -148,6 +160,10 @@ div.nav-menu #header-logo {
     text-align: right;
     cursor: pointer;
     padding: 10px;
+  }
+
+  .home-link {
+    display: block;
   }
 
   nav {
@@ -231,7 +247,9 @@ div.nav-menu #header-logo {
 
 /* End of welcome panel */
 /* Start of news panel */
-
+.newsPanel a:link, .newsPanel a:visited, .newsPanel a:hover, .newsPanel a:active{
+  color: $mainOrange;
+}
 .newsPanel {
   padding: 2px 5px 5px;
   margin: 15px 0;
@@ -274,11 +292,15 @@ div.nav-menu #header-logo {
 .carousel-inner > .item > a > img {
   width: 100%;
   margin: auto;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
   overflow: hidden;
 }
-
+.carousel-caption h1 a:link, .carousel-caption h1 a:visited, .carousel-caption h1 a:hover, .carousel-caption h1 a:active {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
 .carousel .item {
   height: auto;
   max-height: 250px;
@@ -300,10 +322,11 @@ div.nav-menu #header-logo {
 
 .rooms .row img {
   width: 100%;
-  border-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
   display: block;
   margin: 0 auto;
-
+  max-height: 250px;
 }
 
 .rooms .row button {

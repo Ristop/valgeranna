@@ -15,7 +15,6 @@
 <!--javascript-->
 <script src={{URL::asset('/js/jquery.js')}} defer></script>
 <script src={{URL::asset('/js/mobile-header.js')}} defer></script>
-<script src={{URL::asset('/js/show-active-menu-item.js')}} defer></script>
 <script src={{URL::asset('/js/bootstrap.min.js')}} defer></script>
 <script src={{URL::asset('/js/editPost.js')}} defer></script>
 

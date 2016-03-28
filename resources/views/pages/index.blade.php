@@ -4,17 +4,16 @@
     <div class="container">
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
+            <!-- Indicators
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            </ol>
+            </ol>-->
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <img src={{URL::asset('img/main/1.jpg')}} alt="Third">
                     <div class="carousel-caption"><h1><a
-                                    href="http://www.booking.com/hotel/ee/valgeranna-puhkekeskus.et.html?aid=333369;label=valgeranna-puhkekeskus-wCqFC2nl5SfRTbdQIErB3wS66689999894%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atiaud-146342138230%3Akwd-89534953528%3Alp9061552%3Ali%3Adec%3Adm;sid=9b7b5e24a5b65fa56e7c7d16e9a4f962;dcid=12;dest_id=-2626217;dest_type=city;dist=0;room1=A%2CA;sb_price_type=total;srfid=92ef8f9cb56d816b4d84bcfe23252f74f55b7367X1;type=total;ucfs=1&">Broneeri
-                                kohe!</a></h1></div>
+                                    href="http://www.booking.com/hotel/ee/valgeranna-puhkekeskus.et.html?aid=333369;label=valgeranna-puhkekeskus-wCqFC2nl5SfRTbdQIErB3wS66689999894%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atiaud-146342138230%3Akwd-89534953528%3Alp9061552%3Ali%3Adec%3Adm;sid=9b7b5e24a5b65fa56e7c7d16e9a4f962;dcid=12;dest_id=-2626217;dest_type=city;dist=0;room1=A%2CA;sb_price_type=total;srfid=92ef8f9cb56d816b4d84bcfe23252f74f55b7367X1;type=total;ucfs=1&">~<?php echo trans('main.reserve'); ?>~</a></h1></div>
                 </div>
             </div>
             <!-- Left and right controls
@@ -49,7 +48,7 @@
                         suure seltskonnaga kõik üheskoos.
                         <br>Pesemisvõimalused (WC ja dušš) on lähedal asuvas
                         pesemiskompleksis. Kämpingutes on olemas ööbimiseks kõik vajalik (tekid, padjad,
-                        linad,). Rand, palliplats, laste mänguväljak ja rannabaar on 200 m raadiuses.</span>
+                        linad,). <a href="/beach">Rand</a>, palliplats, laste mänguväljak ja <a href="/bar">rannabaar</a> on 200 m raadiuses.</span>
                 </div>
             </div>
             <div class="col-sm-4">

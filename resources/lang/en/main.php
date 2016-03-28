@@ -13,5 +13,6 @@ return [
 
     'posts' => 'News',
     'feedback' => 'Feedback',
-    'aboutUs' => 'About Us'
+    'aboutUs' => 'About Us',
+    'reserve' => 'Book now'
 ];

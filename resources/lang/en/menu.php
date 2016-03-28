@@ -10,10 +10,12 @@ return [
     | The following language lines are used to change menu names
     |
     */
-
+    'home' => 'HOME',
     'rooms' => 'ROOMS',
     'pictures' => 'GALLERY',
-    'reserve' => 'RESERVE',
+    'bar' => 'BAR',
+    'beach' => 'BEACH',
+    'pastime' => 'ACTIVITIES',
     'posts' => 'NEWS',
     'contact' => 'CONTACT',
     'lang' => 'Select language'

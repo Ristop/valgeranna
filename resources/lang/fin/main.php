@@ -13,5 +13,6 @@ return [
 
     'posts' => 'Uutiset',
     'feedback' => 'Vaikutelmia',
-    'aboutUs' => 'Esittely'
+    'aboutUs' => 'Esittely',
+    'reserve' => 'Varaa nyt'
 ];

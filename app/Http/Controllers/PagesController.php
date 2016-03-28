@@ -25,9 +25,19 @@ class PagesController extends Controller
         return view('pages.pictures');
     }
 
-    public function reserve()
+    public function entertainment()
     {
-        return view('pages.reserve');
+        return view('pages.pastime');
+    }
+
+    public function bar()
+    {
+        return view('pages.bar');
+    }
+
+    public function beach()
+    {
+        return view('pages.beach');
     }
 
     public function rooms()

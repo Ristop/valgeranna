@@ -36,7 +36,11 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/pictures', 'PagesController@pictures');
 
-    Route::get('/reserve', 'PagesController@reserve');
+    Route::get('/bar', 'PagesController@bar');
+
+    Route::get('/beach', 'PagesController@beach');
+
+    Route::get('/pastime', 'PagesController@pastime');
 
     Route::get('/rooms', 'PagesController@rooms');
 

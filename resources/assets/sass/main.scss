@@ -59,7 +59,7 @@ h4 {
   height: 250px
 }
 
-/* Navigation Menu */
+/* Navigation Menu----------------------------------------------------------------------------------------------------*/
 ul {
   margin-bottom: 0;
 }
@@ -138,9 +138,7 @@ div.nav-menu #header-logo {
   left: auto;
 }
 
-.carousel-caption {
-  bottom: 0;
-}
+/* End of Navigation Menu---------------------------------------------------------------------------------------------*/
 
 @media (max-width: 550px), only screen and (max-device-width: 550px) {
   .carousel-caption {
@@ -221,8 +219,7 @@ div.nav-menu #header-logo {
   }
 }
 
-/* End of Navigation Menu */
-/* Start of panel panel */
+/* Start of panel panel-----------------------------------------------------------------------------------------------*/
 .welcomeContainer {
   border-top: 1px solid $mainOrange;
   margin-top: 13px;
@@ -245,11 +242,12 @@ div.nav-menu #header-logo {
   overflow: hidden;
 }
 
-/* End of welcome panel */
-/* Start of news panel */
-.newsPanel a:link, .newsPanel a:visited, .newsPanel a:hover, .newsPanel a:active{
+/* End of welcome panel-----------------------------------------------------------------------------------------------*/
+/* Start of news panel------------------------------------------------------------------------------------------------*/
+.newsPanel a:link, .newsPanel a:visited, .newsPanel a:hover, .newsPanel a:active {
   color: $mainOrange;
 }
+
 .newsPanel {
   padding: 2px 5px 5px;
   margin: 15px 0;
@@ -285,9 +283,9 @@ div.nav-menu #header-logo {
   background-color: #00AA00;
 }
 
-/* End of news panel */
+/* End of news panel--------------------------------------------------------------------------------------------------*/
 
-/* Start of carousel */
+/* Start of carousel--------------------------------------------------------------------------------------------------*/
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 100%;
@@ -295,20 +293,58 @@ div.nav-menu #header-logo {
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
   overflow: hidden;
+  min-height: 150px;
 }
-.carousel-caption h1 a:link, .carousel-caption h1 a:visited, .carousel-caption h1 a:hover, .carousel-caption h1 a:active {
+.carousel-caption h2 {
+  color: ghostwhite;
+  text-decoration: none;
+  font-style: italic;
+}
+.carousel-caption h1 a:link, .carousel-caption h1 a:visited, .carousel-caption h1 a:active {
   color: white;
   text-decoration: none;
   font-style: italic;
 }
+
+.carousel-caption h1 a:hover {
+  color: $mainOrange;
+}
+
 .carousel .item {
   height: auto;
   max-height: 250px;
 }
 
-/* End of carousel */
+.carousel-control.right {
+  border-bottom-right-radius: 30px;
+}
 
-/* Start of rooms */
+.carousel-control.left {
+  border-top-left-radius: 30px;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: $mainOrange;
+}
+
+.carousel-caption, .carousel-indicators {
+  bottom: 0;
+}
+.carousel-indicators .active {
+  background-color: $mainOrange;
+  border: 1px solid $mainOrange;
+}
+
+.carousel {
+  overflow: hidden;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/* End of carousel----------------------------------------------------------------------------------------------------*/
+
+/* Start of rooms-----------------------------------------------------------------------------------------------------*/
 .rooms .row {
   padding: 20px 0;
   margin-bottom: 20px;
@@ -338,11 +374,11 @@ div.nav-menu #header-logo {
   text-transform: uppercase;
 }
 
-/* End of rooms */
+/* End of rooms ------------------------------------------------------------------------------------------------------*/
 
-/* Start of log in page*/
+/* Start of log in page-----------------------------------------------------------------------------------------------*/
 
-/* End of log in page*/
+/* End of log in page-------------------------------------------------------------------------------------------------*/
 
 
 

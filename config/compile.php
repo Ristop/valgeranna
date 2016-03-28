@@ -14,7 +14,8 @@ return [
     */
 
     'files' => [
-        //
+        'app\Http\Controllers\PagesController.php',
+        'app\Http\Controllers\PostsController.php'
     ],
 
     /*

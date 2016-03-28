@@ -116,7 +116,8 @@ div.nav-menu #header-logo {
   right: 0;
   left: auto; }
 
-@media screen and (max-width: 550px) {
+@media only screen and (max-device-width: 550px),
+only screen and (max-width: 550px){
   .carousel-caption {
     text-align: center;
     top: 0; }
@@ -235,6 +236,7 @@ div.nav-menu #header-logo {
 .rooms .row img {
   width: 100%;
   border-radius: 10px;
+  max-height: 300px;
   display: block;
   margin: 0 auto; }
 

@@ -133,8 +133,10 @@ div.nav-menu #header-logo {
   right: 0;
   left: auto;
 }
+@media (max-width: 550px), only screen and (max-device-width: 550px) {
+  .container{
 
-@media screen and (max-width: 550px) {
+  }
   .carousel-caption{
     text-align: center;
     top: 0;

@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="container-fluid col-md-12" id="map-container"></div>
+    <div class="container col-md-12" id="map-container"></div>
     <div class="container">
         <!-- Two columns of text below the google maps -->
         <div class="row">

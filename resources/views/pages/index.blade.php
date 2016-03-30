@@ -44,7 +44,7 @@
             <div class="col-sm-8">
                 <h3> <?php echo trans('main.aboutUs'); ?> </h3>
                 <div class="newsPanel">
-                    <p>Asume vaid <b>5km</b> kaugusel Pärnust. Männimetsa ja liivase mererannaga puhkeala on sobilik
+                    <p>Asume vaid <strong>5km</strong> kaugusel Pärnust. Männimetsa ja liivase mererannaga puhkeala on sobilik
                         nii perepuhkuseks, suvepäevade, noortelaagrite ja koolituste korraldamiseks. Uued
                         2015 aasta suvel valminud 2-ja 4-kohalised <a href="/rooms">suvemajad</a> mahutavad kuni 100
                         inimest. Samuti on
@@ -55,7 +55,7 @@
                         <br>Pesemisvõimalused (WC ja dušš) on lähedal asuvas
                         pesemiskompleksis. Kämpingutes on olemas ööbimiseks kõik vajalik (tekid, padjad,
                         linad,). <a href="/beach">Rand</a>, palliplats, laste mänguväljak ja <a
-                                href="/bar">rannabaar</a> on 200 m raadiuses.</span>
+                                href="/bar">rannabaar</a> on 200 m raadiuses.
                 </div>
             </div>
             <div class="col-sm-4">

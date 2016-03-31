@@ -29,7 +29,7 @@
             <div>
                 <button type="submit" class="btn btn-default" value="Submit">Lisa</button>
                 <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right"
-                   title="Vajutades nupule Lisa ilmub uudis avalehele" style="color: #ef581f; font-size: 15px" ;></i>
+                   title="Vajutades nupule Lisa ilmub uudis avalehele" style="color: #ef581f; font-size: 15px" ;><strong>?</strong></i>
             </div>
         </form>
         <hr>

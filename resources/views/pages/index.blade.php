@@ -18,7 +18,7 @@
                 <div class="item">
                     <img src={{URL::asset('img/main/2.png')}} alt="Third">
                     <div class="carousel-caption"><h1><a
-                                    href="http://www.booking.com/hotel/ee/valgeranna-puhkekeskus.et.html?aid=333369;label=valgeranna-puhkekeskus-wCqFC2nl5SfRTbdQIErB3wS66689999894%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atiaud-146342138230%3Akwd-89534953528%3Alp9061552%3Ali%3Adec%3Adm;sid=9b7b5e24a5b65fa56e7c7d16e9a4f962;dcid=4;dest_id=-2626217;dest_type=city;dist=0;room1=A%2CA;sb_price_type=total;srfid=92ef8f9cb56d816b4d84bcfe23252f74f55b7367X1;type=total;ucfs=1&#availability">~<?php echo trans('main.reserve'); ?>
+                                    href="http://tinyurl.com/jgarcav">~<?php echo trans('main.reserve'); ?>
                                 ~</a></h1></div>
                 </div>
             </div>

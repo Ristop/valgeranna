@@ -57,6 +57,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/admin/register','PagesController@register');
 
     Route::get('/admin/password/reset','PagesController@reset');
+
 });
 
 Route::group(['middleware' => 'web'], function () {

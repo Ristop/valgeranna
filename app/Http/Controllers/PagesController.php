@@ -6,6 +6,7 @@ use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\AuthController;
 
 class PagesController extends Controller
 {
@@ -19,7 +20,7 @@ class PagesController extends Controller
     {
         return view('pages.contact');
     }
-    
+
     public function pictures()
     {
         return view('pages.pictures');
@@ -52,10 +53,10 @@ class PagesController extends Controller
 
     public function register()
     {
-        if (Auth::guest()){
+        if (Auth::guest()) {
             return view('auth.login');
         }
-        return view('admin-pages.register');
+        return view('auth.register');
     }
 
     public function reset()

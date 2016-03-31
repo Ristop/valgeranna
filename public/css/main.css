@@ -302,4 +302,12 @@ div.nav-menu #header-logo {
 .editForm input {
   width: 100%; }
 
+.panel-orange > .panel-heading {
+  color: black;
+  background-color: rgba(240, 88, 31, 0.4);
+  border-color: rgba(240, 88, 31, 0.4); }
+
+.panel-orange {
+  border-color: rgba(240, 88, 31, 0.4); }
+
 /*# sourceMappingURL=main.css.map */

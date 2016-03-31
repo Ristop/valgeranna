@@ -78,7 +78,9 @@ class AuthController extends Controller
         if (Auth::guest()) {
             return view('auth.login');
         }
-        return view('auth.register');
+        $users = User::all();
+
+        return view('auth.register', compact('users'));
     }
 
     public function postRegister(Request $request)
@@ -99,6 +101,15 @@ class AuthController extends Controller
         $this->registrar->create($request->all());
         return redirect('/admin/register');
 
+    }
+
+    // Delete post
+    public function removeUser(Request $request){
+        if (Auth::guest()){
+            return view('auth.login');
+        }
+        User::destroy($request->id);
+        return back();
     }
 
 

@@ -15,7 +15,7 @@
                     <img src={{URL::asset('img/main/2.png')}} alt="first">
                     <div class="carousel-caption">
                         <h1>
-                            <a href="http://tinyurl.com/jgarcav">~<?php echo trans('main.reserve'); ?>~</a>
+                            <a href="http://tinyurl.com/jgarcav">~{{ trans('main.reserve') }}~</a>
                         </h1>
                     </div>
                 </div>

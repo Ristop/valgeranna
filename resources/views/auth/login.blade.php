@@ -6,7 +6,7 @@
             <div class="col-md-3">
             </div>
             <div class="col-md-6">
-                <div class="panel panel-default">
+                <div class="panel panel-orange">
                     <div class="panel-heading">Logi sisse</div>
                     <div class="panel-body">
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">

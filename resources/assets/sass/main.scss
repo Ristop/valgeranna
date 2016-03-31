@@ -1,4 +1,5 @@
 $mainOrange: #ef581f;
+$lightOrange: rgba(240, 88, 31, 0.4);
 
 body {
   background-color: whitesmoke;
@@ -295,11 +296,13 @@ div.nav-menu #header-logo {
   overflow: hidden;
   min-height: 150px;
 }
+
 .carousel-caption h2 {
   color: ghostwhite;
   text-decoration: none;
   font-style: italic;
 }
+
 .carousel-caption h1 a:link, .carousel-caption h1 a:visited, .carousel-caption h1 a:active {
   color: white;
   text-decoration: none;
@@ -331,6 +334,7 @@ div.nav-menu #header-logo {
 .carousel-caption, .carousel-indicators {
   bottom: 0;
 }
+
 .carousel-indicators .active {
   background-color: $mainOrange;
   border: 1px solid $mainOrange;
@@ -380,7 +384,17 @@ div.nav-menu #header-logo {
 
 /* End of log in page-------------------------------------------------------------------------------------------------*/
 
-.editForm input{
+.editForm input {
   width: 100%;
+}
+
+.panel-orange > .panel-heading {
+  color: black;
+  background-color: $lightOrange;
+  border-color: $lightOrange;
+}
+
+.panel-orange {
+  border-color: $lightOrange;
 }
 

@@ -26,13 +26,11 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
+
+    // Routes for main pages
     Route::get('/', 'PagesController@home');
 
-    Route::get('/contact', 'PagesController@contact');
-
-    Route::get('/posts', 'PostsController@posts');
-
-    Route::get('/posts/{id}', 'PostsController@post');
+    Route::get('/rooms', 'PagesController@rooms');
 
     Route::get('/pictures', 'PagesController@pictures');
 
@@ -42,25 +40,27 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/pastime', 'PagesController@pastime');
 
-    Route::get('/rooms', 'PagesController@rooms');
+    Route::get('/posts', 'PostsController@posts');
+    Route::get('/posts/{id}', 'PostsController@post');
 
+    Route::get('/contact', 'PagesController@contact');
+
+
+    // Routes for admin pages
     Route::get('/admin', 'PostsController@adminNewPost');
 
     Route::get('/admin/newPost', 'PostsController@adminNewPost');
-
     Route::post('/admin/addnew','PostsController@addNewPost');
 
     Route::post('/admin/edit/{id}', 'PostsController@editPost');
-
     Route::post('/admin/delete','PostsController@deletePost');
-
-    /*Route::get('/admin/register','PagesController@register');*/
-
-    Route::get('/admin/password/reset','PagesController@reset');
 
     // Registration routes...
     Route::get('/admin/register', 'Auth\AuthController@getRegister');
     Route::post('/admin/register', 'Auth\AuthController@postRegister');
+    Route::post('/admin/user/delete', 'Auth\AuthController@removeUser');
+    
+    Route::get('/admin/password/reset','PagesController@reset');
 
 });
 

@@ -55,7 +55,7 @@ class PostsController extends Controller
         $current = $current_time -> toDateTimeString();
         DB::insert('insert into `posts` (user_id, title, content, created_at, updated_at) values (?,?,?,?,?)',[$user, $title, $content, $current, $current]);
 
-/*        $post = new Post($request->all());
+        /*$post = new Post($request->all());
         $post->by(Auth::user());
         $post->save();*/
 

@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -38,13 +40,13 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        //$this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -59,7 +61,7 @@ class AuthController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return User
      */
     protected function create(array $data)
@@ -70,4 +72,34 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function getRegister()
+    {
+        if (Auth::guest()) {
+            return view('auth.login');
+        }
+        return view('auth.register');
+    }
+
+    public function postRegister(Request $request)
+    {
+        if (Auth::guest()) {
+            return view('auth.login');
+        }
+        $validator = $this->registrar->validator($request->all());
+
+        if ($validator->fails())
+        {
+
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        $this->registrar->create($request->all());
+        return redirect('/admin/register');
+
+    }
+
+
 }

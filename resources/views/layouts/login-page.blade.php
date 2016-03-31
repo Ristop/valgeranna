@@ -5,7 +5,6 @@
     @include('layouts.head')
 </head>
 <body>
-@include('layouts.admin-header')
-@yield('content')
+    @yield('content')
 </body>
 </html>

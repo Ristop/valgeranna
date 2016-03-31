@@ -54,9 +54,13 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/admin/delete','PostsController@deletePost');
 
-    Route::get('/admin/register','PagesController@register');
+    /*Route::get('/admin/register','PagesController@register');*/
 
     Route::get('/admin/password/reset','PagesController@reset');
+
+    // Registration routes...
+    Route::get('/admin/register', 'Auth\AuthController@getRegister');
+    Route::post('/admin/register', 'Auth\AuthController@postRegister');
 
 });
 

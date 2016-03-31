@@ -1,5 +1,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Valgeranna puhkekeskuse veebileht">
+<meta name="keywords" content="valgeranna,puhkekeskus,broneeri,puhka,rand,baar,majutus,ööbimine,pärnu,eesti">
+
+<meta property="og:title" content="Valgeranna puhkekeskus">
+<meta property="og:image" content={{URL::asset('img/logo.png')}}>
+<meta property="og:description" content="Oleme värskelt valminud kämpingu- ja puhkekeskus looduskaunis Valgerannas, pakume väga palju erinevaid atraktsioone ja tegevusi, pettuma ei pea keegi!">
+
 <title>Valgeranna puhkekeskus</title>
 
 <!--stylesheets-->
@@ -7,7 +14,6 @@
 <link rel="stylesheet" href={{URL::asset('/css/main.css')}}>
 
 <!--custom fonts-->
-
 <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 
 <!--javascript-->

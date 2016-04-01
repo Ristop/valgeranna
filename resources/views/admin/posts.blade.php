@@ -21,7 +21,7 @@
                         </ul>
                     @endif
 
-                    <form method="POST" action="/admin/addnew">
+                    <form method="POST" action="/admin/posts/new">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="title">Pealkiri</label>
@@ -87,7 +87,7 @@
                                             Muuda
                                         </button>
                                     </div>
-                                    <form class="col-sm-6 col-xs-6" method="post" action="/admin/delete">
+                                    <form class="col-sm-6 col-xs-6" method="post" action="/admin/posts/delete">
                                         {{csrf_field()}}
                                         <button class="btn btn-group-sm btn-danger" type="submit" name="id"
                                                 value={{$post->id}} >
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="newsPanel-body">
                                     <form class="form-group editForm hidden" method='post'
-                                          action={{'/admin/edit/' . $post->id}} id={{'form-'.$post->id}}>
+                                          action={{'/admin/posts/edit/' . $post->id}} id={{'form-'.$post->id}}>
                                         {{csrf_field()}}
                                         <textarea class="form-control" type='text' name="content"></textarea>
                                         <br>

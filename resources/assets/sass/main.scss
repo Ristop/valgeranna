@@ -164,17 +164,13 @@ div.nav-menu #header-logo {
     text-decoration: none;
   }
 
-  .menu-trigger, .menu-trigger-admin {
+  .menu-trigger{
     display: block;
     color: white;
     background-color: $mainOrange;
     text-align: right;
     cursor: pointer;
     padding: 10px;
-  }
-
-  .nav-menu-admin{
-    display: block;
   }
 
   .home-link {
@@ -233,10 +229,6 @@ div.nav-menu #header-logo {
   .dropdown-menu-position {
     right: auto;
     left: 0;
-  }
-
-  #adminNavigation{
-    display: block;
   }
 }
 
@@ -426,6 +418,8 @@ div.nav-menu #header-logo {
   transition: all 0.5s ease;
 }
 
+/* Start of admin page------------------------------------------------------------------------------------------------*/
+
 #wrapper.toggled {
   padding-left: 250px;
 }
@@ -442,6 +436,7 @@ div.nav-menu #header-logo {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  background-color: white;
   border-right: 1px solid $mainOrange;
 }
 
@@ -503,6 +498,7 @@ div.nav-menu #header-logo {
   height: 65px;
   font-size: 18px;
   line-height: 60px;
+  cursor: default;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -514,7 +510,7 @@ div.nav-menu #header-logo {
   background: none;
 }
 
-@media(min-width:550px) {
+@media(min-width:800px) {
   #wrapper {
     padding-left: 250px;
   }
@@ -524,7 +520,7 @@ div.nav-menu #header-logo {
   }
 
   #sidebar-wrapper {
-    width: 250px;
+    width: 251px;
   }
 
   #wrapper.toggled #sidebar-wrapper {
@@ -542,3 +538,58 @@ div.nav-menu #header-logo {
     margin-right: 0;
   }
 }
+@media (max-width: 800px), only screen and (max-device-width: 800px) {
+  #adminNavigation .nav-menu {
+    height: auto;
+    display: none;
+    position: relative;
+  }
+
+  #adminNavigation .nav-expanded {
+    display: block;
+  }
+
+  #adminNavigation .nav-menu ul {
+    margin-left: 0;
+    text-align: left;
+    position: relative;
+  }
+
+  #adminNavigation .nav-menu ul li {
+    float: none;
+    border-bottom: 1px solid $mainOrange;
+  }
+
+  #adminNavigation .nav-menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  #adminNavigation .nav-menu ul li:first-child {
+    margin-left: 0;
+  }
+  #adminNavigation .nav-menu a#header-logo {
+    visibility: hidden;
+    display: none;
+  }
+
+  #adminNavigation .nav-menu ul li a:link,
+  #adminNavigation .nav-menu ul li a:visited {
+    padding: 3px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  #adminNavigation .menu-trigger {
+    display: block;
+    color: white;
+    background-color: $mainOrange;
+    text-align: right;
+    cursor: pointer;
+    padding: 10px;
+  }
+  #adminNavigation{
+    display: block;
+  }
+}
+
+/* End of admin page--------------------------------------------------------------------------------------------------*/

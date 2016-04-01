@@ -26,20 +26,21 @@ class PostsController extends Controller
         $post = Post::findOrFail($id);
         return view('pages.singlePost', compact('post'));
     }
-
+    
+    // For administrator
     // Get all posts for the admin page
-    public function adminNewPost()
+    public function adminPosts()
     {
         if (Auth::guest()){
             return view('auth.login');
         }
         $posts = Post::with('user')->get();
 
-        return view('admin-pages.admin-new-post', compact('posts'));
+        return view('admin.posts', compact('posts'));
     }
 
     // Add new post on the admin page
-    public function addNewPost(Request $request){
+    public function adminAddPost(Request $request){
         if (Auth::guest()){
             return view('auth.login');
         }
@@ -64,7 +65,7 @@ class PostsController extends Controller
         return back();
     }
 
-    public function editPost(Request $request, $id) {
+    public function adminEditPost(Request $request, $id) {
         if (Auth::guest()){
             return view('auth.login');
         }
@@ -75,7 +76,7 @@ class PostsController extends Controller
     }
 
     // Delete post
-    public function deletePost(Request $request){
+    public function adminDeletePost(Request $request){
         if (Auth::guest()){
             return view('auth.login');
         }

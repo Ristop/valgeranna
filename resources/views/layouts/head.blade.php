@@ -11,7 +11,7 @@
 
 <!--stylesheets-->
 <link rel="stylesheet" href={{URL::asset('/css/bootstrap.css')}}>
-<link rel="stylesheet" href={{URL::asset('/css/main2.css')}}>
+<link rel="stylesheet" href={{URL::asset('/css/main.css')}}>
 
 <!--custom fonts-->
 <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>

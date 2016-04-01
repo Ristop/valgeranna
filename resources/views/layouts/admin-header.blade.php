@@ -1,17 +1,32 @@
-<div class="container">
-    <header>
-        <nav>
-            <span class="menu-trigger">MENU</span>
-            <div class="nav-menu">
-                <a href="/admin" id="header-logo"><img alt="Valgeranna" src={{URL::asset('img/logo.png')}}></a>
-                <ul>
-                    <li><a href="/admin/newPost">UUDISEID</a></li>
-                    <li><a href="#">PILDID</a></li>
-                    <li><a href="{{ url('/admin/register')}}">KASUTAJAD</a></li>
-                    <li><a href="{{ url('/logout')}}">LOGI VÄLJA</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<div id="wrapper">
+    <div class="container" id="adminNavigation">
+        <span class="menu-trigger">MENÜÜ</span>
+        <div class="nav-menu">
+            <ul>
+                <li class="{{ Route::getCurrentRoute()->getPath()=='admin/newPost' ? 'active-link' : '' }}"><a
+                            href="/admin/newPost">Uudised</a></li>
+                <li class="{{ Route::getCurrentRoute()->getPath()=='admin/pictures' ? 'active-link' : '' }}"><a
+                            href="#">Pildid</a>
+                </li>
+                <li class="{{ Route::getCurrentRoute()->getPath()=='admin/register' ? 'active-link' : '' }}"><a
+                            href="{{ url('/admin/register')}}">Kasutajad</a></li>
+                <li><a href="{{ url('/logout')}}">Logi välja</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                Administraator
+            </li>
+            <li class="{{ Route::getCurrentRoute()->getPath()=='admin/newPost' ? 'active-link' : '' }}"><a
+                        href="/admin/newPost">Uudised</a></li>
+            <li class="{{ Route::getCurrentRoute()->getPath()=='admin/pictures' ? 'active-link' : '' }}"><a href="#">Pildid</a>
+            </li>
+            <li class="{{ Route::getCurrentRoute()->getPath()=='admin/register' ? 'active-link' : '' }}"><a
+                        href="{{ url('/admin/register')}}">Kasutajad</a></li>
+            <li><a href="{{ url('/logout')}}">Logi välja</a></li>
+        </ul>
+    </div>
 </div>
-

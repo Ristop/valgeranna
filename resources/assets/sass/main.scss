@@ -1,5 +1,5 @@
 $mainOrange: #ef581f;
-$lightOrange: rgba(240, 88, 31, 0.4);
+$lightOrange: rgba(255, 145, 27, 0.63);
 
 body {
   background-color: whitesmoke;
@@ -126,6 +126,10 @@ div.nav-menu #header-logo {
   display: none;
 }
 
+.menu-trigger-admin {
+  display: none;
+}
+
 .home-link {
   display: none;
 }
@@ -137,6 +141,14 @@ div.nav-menu #header-logo {
 .dropdown-menu-position {
   right: 0;
   left: auto;
+}
+
+.nav-menu-admin{
+  display: none;
+}
+
+#adminNavigation{
+  display: none;
 }
 
 /* End of Navigation Menu---------------------------------------------------------------------------------------------*/
@@ -152,13 +164,17 @@ div.nav-menu #header-logo {
     text-decoration: none;
   }
 
-  .menu-trigger {
+  .menu-trigger, .menu-trigger-admin {
     display: block;
     color: white;
     background-color: $mainOrange;
     text-align: right;
     cursor: pointer;
     padding: 10px;
+  }
+
+  .nav-menu-admin{
+    display: block;
   }
 
   .home-link {
@@ -217,6 +233,10 @@ div.nav-menu #header-logo {
   .dropdown-menu-position {
     right: auto;
     left: 0;
+  }
+
+  #adminNavigation{
+    display: block;
   }
 }
 
@@ -398,3 +418,127 @@ div.nav-menu #header-logo {
   border-color: $lightOrange;
 }
 
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-right: 1px solid $mainOrange;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color:$mainOrange;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: $mainOrange;
+}
+
+.sidebar-nav .active-link a{
+  text-decoration: none;
+  color: #fff;
+  background: $mainOrange;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: black;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: black;
+  background: none;
+}
+
+@media(min-width:550px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+    width: 250px;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+    max-width: 1000px;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}

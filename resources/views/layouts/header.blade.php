@@ -2,7 +2,6 @@
     <header>
         <nav>
             <div class="dropdown flag">
-
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img src="/img/flags/{{ \App::getLocale() }}_flag.png" alt = "flag">
                 </a>

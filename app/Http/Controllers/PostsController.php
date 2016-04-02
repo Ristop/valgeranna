@@ -16,7 +16,7 @@ class PostsController extends Controller
     // Get all posts for the post page
     public function posts()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->simplePaginate(7);
         return view('pages.news', compact('posts'));
     }
 

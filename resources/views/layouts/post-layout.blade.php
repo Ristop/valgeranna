@@ -1,4 +1,4 @@
-<div class="col-sm-9 col-xs-9">
+<div class="col-sm-9 col-xs-9 pull-left">
     <div class="newsPanel">
         <div class="newsPanel-heading">
             <a href={{'/posts/'.$post->id}}><h4>{{$post->title}}</h4></a>

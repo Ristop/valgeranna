@@ -1,19 +1,15 @@
 
-/*
-if ($.infinitescroll) {
-    alert("Module exists");
-} else {
-    alert("broken");
-}*/
-
-$('.scroll').infinitescroll({
-    navSelector  : '#page-nav',    // selector for the paged navigation
-    nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
-    // selector for the NEXT link (to page 2)
-    itemSelector : ".scroll",
-    loading: {
-        finishedMsg: 'No more pages to load.',
-        img: 'http://i.imgur.com/6RMhx.gif',
-        msgText: "<em>Loading new posts</em>"
-    }
+$(function() {
+    $('.scroll').jscroll({
+        autoTrigger: true,
+        nextSelector: '.pager li:last-child a',
+        contentSelector: '.scroll',
+        pagingSelector: '.pager',
+        callback: function() { // Move to correct spot
+            //$(".jscroll-inner div.pager").remove();
+            $(".jscroll-added .scroll ol li").appendTo(".jscroll-inner ol");
+            //$(".jscroll-added .scroll .pager").appendTo(".jscroll-inner");
+            $(".jscroll-added").remove();
+        }
+    });
 });

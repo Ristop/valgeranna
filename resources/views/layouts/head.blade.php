@@ -21,7 +21,7 @@
 <script src={{URL::asset('/js/mobile-header.js')}} defer></script>
 <script src={{URL::asset('/js/bootstrap.min.js')}} defer></script>
 <script src={{URL::asset('/js/editPost.js')}} defer></script>
-<script src={{URL::asset('/js/jquery.infinitescroll.min.js')}} defer></script>
+<script src={{URL::asset('/js/jquery.jscroll.js')}} defer></script>
 <script src={{URL::asset('/js/infiniteNewsScroll.js')}} defer></script>
 
 

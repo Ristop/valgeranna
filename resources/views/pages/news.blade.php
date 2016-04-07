@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div id="container" class="container">
+    <div class="container">
         <div class="scroll">
             <ol>
                 @foreach($posts as $post)
@@ -10,9 +10,7 @@
                     </li>
                 @endforeach
             </ol>
-            <nav id="page-nav">
-                {{ $posts->links() }}
-            </nav>
+            {{ $posts->links() }}
         </div>
     </div>
 @stop

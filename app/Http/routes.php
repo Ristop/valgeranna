@@ -23,6 +23,8 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
+    // Route for ajax polling request to update news elements in real time.
+    Route::get('/news/ajaxpoll', 'PagesController@ajaxNewsRequest');
 
     // Routes for main pages
     Route::get('/', 'PagesController@home');

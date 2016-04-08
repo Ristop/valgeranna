@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*",
+        "laravel/framework": "5.2.*"
         /*"laravel/socialite": "^2.0"*/
     },
     "require-dev": {
@@ -48,6 +48,7 @@
         ]
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "process-timeout":0
     }
 }

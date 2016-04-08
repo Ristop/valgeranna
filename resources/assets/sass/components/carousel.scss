@@ -1,0 +1,71 @@
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  overflow: hidden;
+  min-height: 150px;
+}
+
+.carousel-caption h2 {
+  color: ghostwhite;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.carousel-caption h1 a:link, .carousel-caption h1 a:visited, .carousel-caption h1 a:active {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.carousel-caption h1 a:hover {
+  color: $mainOrange;
+}
+
+.carousel .item {
+  height: auto;
+  max-height: 250px;
+}
+
+.carousel-control.right {
+  border-bottom-right-radius: 30px;
+}
+
+.carousel-control.left {
+  border-top-left-radius: 30px;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: $mainOrange;
+}
+
+.carousel-caption, .carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-indicators .active {
+  background-color: $mainOrange;
+  border: 1px solid $mainOrange;
+}
+
+.carousel {
+  overflow: hidden;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+// Form mobile screens
+@media (max-width: 550px), only screen and (max-device-width: 550px) {
+  .carousel-caption {
+    text-align: center;
+    bottom: 0;
+  }
+  .carousel-caption h1 a:link, .carousel-caption h1 a:visited, .carousel-caption h1 a:hover, .carousel-caption h1 a:active {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+}

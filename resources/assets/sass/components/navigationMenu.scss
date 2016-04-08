@@ -1,0 +1,160 @@
+ul {
+  margin-bottom: 0;
+}
+
+nav {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 21px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $mainOrange;
+}
+
+div.nav-menu {
+  padding: 0 0;
+  height: 130px;
+  margin-top: 10px;
+  display: -webkit-flex;
+  position: relative;
+}
+
+div.nav-menu ul {
+  margin-left: 130px;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+div.nav-menu ul li {
+  list-style: none;
+  float: left;
+}
+
+div.nav-menu ul li a:link,
+div.nav-menu ul li a:visited {
+  text-align: center;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+div.nav-menu ul li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+div.nav-menu ul li a:hover {
+  color: white;
+  background-color: $mainOrange;
+}
+
+div.nav-menu ul li.active-link a {
+  color: white;
+  background-color: $mainOrange;
+}
+
+div.nav-menu #header-logo {
+  position: absolute;
+  top: 15px;
+}
+
+.menu-trigger {
+  margin: 0 -15px;
+  display: none;
+}
+
+.menu-trigger-admin {
+  display: none;
+}
+
+.home-link {
+  display: none;
+}
+
+.flag {
+  float: right;
+}
+
+.dropdown-menu-position {
+  right: 0;
+  left: auto;
+}
+
+.nav-menu-admin{
+  display: none;
+}
+
+#adminNavigation{
+  display: none;
+}
+
+// Mobile view navigation
+
+@media (max-width: 550px), only screen and (max-device-width: 550px) {
+  .menu-trigger{
+    display: block;
+    color: white;
+    background-color: $mainOrange;
+    text-align: right;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .home-link {
+    display: block;
+  }
+
+  nav {
+    border-bottom: none;
+  }
+
+  div.nav-menu {
+    height: auto;
+    display: none;
+    position: relative;
+  }
+
+  div.nav-expanded {
+    display: block;
+  }
+
+  div.nav-menu ul {
+    margin-left: 0;
+    text-align: left;
+    position: relative;
+  }
+
+  div.nav-menu ul li {
+    float: none;
+    border-bottom: 1px solid $mainOrange;
+  }
+
+  div.nav-menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  div.nav-menu ul li:first-child {
+    margin-left: 0;
+  }
+  div.nav-menu a#header-logo {
+    visibility: hidden;
+    display: none;
+  }
+
+  div.nav-menu ul li a:link,
+  div.nav-menu ul li a:visited {
+    padding: 3px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .flag {
+    padding-top: 10px;
+    float: left;
+  }
+
+  .dropdown-menu-position {
+    right: auto;
+    left: 0;
+  }
+}

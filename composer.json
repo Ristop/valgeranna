@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "laravel/socialite": "^2.0"
+        /*"laravel/socialite": "^2.0"*/
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -31,7 +31,7 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "php -r \"copy('.env.example', '.env');\""
+            "php -r \"copy('.env.azure', '.env');\""
         ],
         "post-create-project-cmd": [
             "php artisan key:generate"

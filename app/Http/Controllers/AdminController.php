@@ -34,7 +34,7 @@ class AdminController extends Controller
 
         $user = Auth::id();
         $title = $request-> title;
-        $content = $request-> content;
+        $content = $request -> content;
         $current_time = Carbon::now();
         $current = $current_time -> toDateTimeString();
         DB::insert('insert into `posts` (user_id, title, content, created_at, updated_at) values (?,?,?,?,?)',[$user, $title, $content, $current, $current]);

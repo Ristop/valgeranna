@@ -53,10 +53,11 @@
                 </div>
             </div>
             <!-- News column -->
-            <div class="col-sm-4">
+
+            <div id = "news" class="col-sm-4">
                 <h3> {{ trans('main.posts') }} </h3>
                 @foreach($posts as $post)
-                    <div class="newsPanel">
+                    <div id = {{$post->id}} class="newsPanel">
                         <div class="newsPanel-heading">
                             <a href={{ '/posts/'.$post->id }}><h4>{{ $post->title }}</h4></a>
                         </div>

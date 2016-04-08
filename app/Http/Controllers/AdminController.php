@@ -3,48 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 use Carbon\Carbon;
 use App\Post;
-use App\User;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class PostsController extends Controller
+/*
+ * Controller for the administrator panel, all pages that are related to admin panel go through this controller, that
+ * includes all POST and GET requests for deleting, adding and modifying the page data.
+ * */
+class AdminController extends Controller
 {
-    // Get all posts for the post page
-    public function posts()
-    {
-        $posts = Post::orderBy('created_at', 'desc')->simplePaginate(4);
-
-        return view('pages.news', compact('posts'));
+    public function __construct(){
+        $this->middleware('auth'); // User needs to be authenticated in order to see admin panel
     }
 
-    // Get post by the id
-    public function post($id)
-    {
-        $post = Post::findOrFail($id);
-        return view('pages.singlePost', compact('post'));
-    }
-    
-    // For administrator
     // Get all posts for the admin page
-    public function adminPosts()
-    {
-        if (Auth::guest()){
-            return view('auth.login');
-        }
+    public function adminPosts(){
         $posts = Post::with('user')->get();
-
         return view('admin.posts', compact('posts'));
     }
 
     // Add new post on the admin page
     public function adminAddPost(Request $request){
-        if (Auth::guest()){
-            return view('auth.login');
-        }
         $this->validate($request, [
             'title' => 'required|min:10',
             'content' => 'required|min:10'
@@ -57,19 +39,15 @@ class PostsController extends Controller
         $current = $current_time -> toDateTimeString();
         DB::insert('insert into `posts` (user_id, title, content, created_at, updated_at) values (?,?,?,?,?)',[$user, $title, $content, $current, $current]);
 
+        // Replace previous with this after the course is over
         /*$post = new Post($request->all());
         $post->by(Auth::user());
         $post->save();*/
-
-
         //Post::create(['content' => $request->content, 'title'=>$request->title]);
         return back();
     }
 
     public function adminEditPost(Request $request, $id) {
-        if (Auth::guest()){
-            return view('auth.login');
-        }
         $post = Post::find($id);
         $post->content = $request->content;
         $post->save();
@@ -78,12 +56,7 @@ class PostsController extends Controller
 
     // Delete post
     public function adminDeletePost(Request $request){
-        if (Auth::guest()){
-            return view('auth.login');
-        }
-
         Post::destroy($request->id);
         return back();
     }
-
 }

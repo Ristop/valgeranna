@@ -27,6 +27,9 @@
                         href="{{ url('/admin/register')}}">Kasutajad</a></li>
             <li class="{{ Route::getCurrentRoute()->getPath()=='admin/pictures' ? 'active-link' : '' }}"><a href="#">Pildid</a>
             </li>
+            <li class="sidebar-brand">
+                <p>{{Auth::user()->name}}</p>
+            </li>
             <li><a href="{{ url('/logout')}}">Logi välja</a></li>
         </ul>
     </div>

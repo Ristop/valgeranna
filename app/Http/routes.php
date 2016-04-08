@@ -11,9 +11,6 @@
 |
 */
 
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -40,31 +37,30 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/pastime', 'PagesController@pastime');
 
-    Route::get('/posts', 'PostsController@posts');
-    Route::get('/posts/{id}', 'PostsController@post');
+    Route::get('/posts', 'PagesController@posts');
+    Route::get('/posts/{id}', 'PagesController@post');
 
     Route::get('/contact', 'PagesController@contact');
 
 
     // Routes for admin pages
-    Route::get('/admin', 'PostsController@adminPosts');
+    Route::get('/admin', 'AdminController@adminPosts');
 
-    Route::get('/admin/posts', 'PostsController@adminPosts');
-    Route::post('/admin/posts/new','PostsController@adminAddPost');
-    Route::post('/admin/posts/edit/{id}', 'PostsController@adminEditPost');
-    Route::post('/admin/posts/delete','PostsController@adminDeletePost');
+    Route::get('/admin/posts', 'AdminController@adminPosts');
+    Route::post('/admin/posts/new','AdminController@adminAddPost');
+    Route::post('/admin/posts/edit/{id}', 'AdminController@adminEditPost');
+    Route::post('/admin/posts/delete','AdminController@adminDeletePost');
 
-    // Registration routes...
+    // Overriding registration routes so user can only register if logged in
     Route::get('/admin/register', 'Auth\AuthController@getRegister');
     Route::post('/admin/register', 'Auth\AuthController@postRegister');
     Route::post('/admin/register/user/delete', 'Auth\AuthController@removeUser');
     
-    Route::get('/admin/password/reset','PagesController@reset');
+    Route::get('/admin/password/reset','AdminController@reset');
 
-});
-
-Route::group(['middleware' => 'web'], function () {
+    // Authentication
     Route::auth();
     Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']); //jah
-    Route::get('/home', 'HomeController@index');
+    Route::get('/home','PagesController@back');
+
 });

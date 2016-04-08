@@ -4,16 +4,33 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Auth\AuthController;
 
 class PagesController extends Controller
 {
+    public function back(){
+        return back();
+    }
+    
     public function home()
     {
         $posts = Post::all()->reverse()->take(2); // Take 3 most recent posts
         return view('pages.index', compact('posts'));
+    }
+
+    // Get all posts for the post page
+    public function posts()
+    {
+        $posts = Post::orderBy('created_at', 'desc')->simplePaginate(4);
+
+        return view('pages.news', compact('posts'));
+    }
+
+    // Get post by the id
+    public function post($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('pages.singlePost', compact('post'));
     }
 
     public function contact()
@@ -63,5 +80,6 @@ class PagesController extends Controller
     {
         return view('auth.passwords.reset');
     }
+
 
 }

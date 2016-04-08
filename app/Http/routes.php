@@ -42,7 +42,6 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/contact', 'PagesController@contact');
 
-
     // Routes for admin pages
     Route::get('/admin', 'AdminController@adminPosts');
 
@@ -62,5 +61,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::auth();
     Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']); //jah
     Route::get('/home','PagesController@back');
+
+    $s = 'social.';
+    Route::get('/social/redirect/{provider}',   ['as' => $s . 'redirect',   'uses' => 'Auth\AuthController@getSocialRedirect']);
+    Route::get('/social/handle/{provider}',     ['as' => $s . 'handle',     'uses' => 'Auth\AuthController@getSocialHandle']);
 
 });

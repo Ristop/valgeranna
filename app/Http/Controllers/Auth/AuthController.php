@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Auth;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -56,6 +57,20 @@ class AuthController extends Controller
         ]);
     }
 
+    protected function socialValidator(array $data){
+        return Validator::make($data, [
+            'name' => 'required|max:255|unique:users',
+            'email' => 'required|email|max:255|unique:users'
+        ]);
+    }
+
+    protected function socialLogInValidator(array $data){
+        return Validator::make($data, [
+            'name' => 'required|max:255|exists:users',
+            'email' => 'required|email|max:255|exists:users'
+        ]);
+    }
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -67,6 +82,13 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+        ]);
+    }
+
+    protected function createGoogleUser(array $data){
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email']
         ]);
     }
 
@@ -102,5 +124,52 @@ class AuthController extends Controller
         }
         User::destroy($request->id);
         return back();
+    }
+
+    public function getSocialRedirect($provider){
+        $providerKey = \Config::get('services.' . $provider);
+        if(empty($providerKey))
+            return view('pages.status')
+                ->with('error','No such provider');
+
+        return Socialite::driver( $provider )->redirect();
+    }
+
+    public function getSocialHandle($provider){
+        if (Auth::guest()){
+            $socialUser = Socialite::driver($provider)->user();
+
+            $matchUser = ['name' => $socialUser->name, 'email' => $socialUser->email];
+
+            $registeredUser = User::where($matchUser)->first();
+            if (is_null($registeredUser)){
+                $valUser = ['name' => "", 'email' => ""];
+            }else{
+                $valUser = ['name' => $registeredUser->name, 'email' => $registeredUser->email];
+            }
+
+            $validator = $this->socialLogInValidator($valUser);
+
+            if ($validator->fails()){
+                $validator->errors()->add('google', 'Antud google kasutaja ei ole administraator');
+                return redirect('/login')->withErrors($validator);
+            }else{
+                Auth::guard($this->getGuard())->login($registeredUser);
+                return redirect('/admin');
+            }
+        }else{
+            $socialUser = Socialite::driver($provider)->user();
+            $newUser = ['name' => $socialUser->name, 'email' => $socialUser->email];
+
+            $validator = $this->socialValidator($newUser);
+
+            if ($validator->fails()){
+                $this->throwValidationException(
+                    $newUser, $validator
+                );
+            }
+            $this->createGoogleUser($newUser);
+            return redirect('/admin/register');
+        }
     }
 }

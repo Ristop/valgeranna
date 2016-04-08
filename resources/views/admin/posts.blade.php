@@ -79,20 +79,17 @@
                         <div class="col-sm-12 col-xs-12">
                             <div class="newsPanel">
                                 <div class="row pull-right">
-                                    <div class="col-sm-6 col-xs-6">
-                                        {{csrf_field()}}
-                                        <button class="btn btn-group-sm btn-info edit-button"
-                                                id={{'edit-'.$post->id}} name="id"
-                                                value={{$post->id}} >
-                                            Muuda
-                                        </button>
-                                    </div>
-                                    <form class="col-sm-6 col-xs-6" method="post" action="/admin/posts/delete">
-                                        {{csrf_field()}}
-                                        <button class="btn btn-group-sm btn-danger" type="submit" name="id"
-                                                value={{$post->id}} >
-                                            Kustuta
-                                        </button>
+                                    <form method="post" action="/admin/posts/delete">
+                                        <div class="btn-group">
+                                            {{csrf_field()}}
+                                            <button class="btn btn-info edit-button" type='button' name="id"
+                                                    id={{'edit-'.$post->id}}  value={{$post->id}}> Muuda
+                                            </button>
+                                            {{csrf_field()}}
+                                            <button class="btn btn-danger" type="submit" name="id" value={{$post->id}} >
+                                                Kustuta
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
 

@@ -52,6 +52,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/admin/posts/edit/{id}', 'AdminController@adminEditPost');
     Route::post('/admin/posts/delete','AdminController@adminDeletePost');
 
+    //For ajax update
+    Route::post('/admin/posts/update', 'AdminController@adminEditPost');
+
     // Overriding registration routes so user can only register if logged in
     Route::get('/admin/register', 'Auth\AuthController@getRegister');
     Route::post('/admin/register', 'Auth\AuthController@postRegister');
@@ -72,4 +75,5 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/contact','PagesController@bankQuery');
     Route::post('callback/seb','BankController@callback');
     Route::post('cancel/seb','BankController@cancel');
+
 });

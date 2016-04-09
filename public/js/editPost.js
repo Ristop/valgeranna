@@ -10,6 +10,8 @@ $(document).ready(function(){
         var tf = postForm.children(1)[1];
         tf.value = postText;
         tf.innerText = postText;
+
+
     });
 
 });

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rooms xmlns:roo="http://www.rooms.com" xmlns:comf="http://www.comforts.com">
+    <room>
+        <roo:name>Kaheinimesetuba</roo:name>
+        <price>45</price>
+        <description>Kaheinimesetoa suurus on 12 ruutmeetrit. Toas on üks kaheinimesevoodi ning istumisnurk jne...</description>
+        <comforts>
+            <comfort>
+                <comf:name>siseõu</comf:name>
+            </comfort>
+            <comfort>
+                <comf:name>rõdu</comf:name>
+            </comfort>
+            <comfort>
+                <comf:name>merevaade</comf:name>
+            </comfort>
+            <comfort>
+                <comf:name>grill</comf:name>
+            </comfort>
+        </comforts>
+    </room>
+    <room>
+        <roo:name>Neljainimesetuba</roo:name>
+        <price>68</price>
+        <description>Neljainimesetoa suurus on 18 ruutmeetrit. Toas kaks üheinimesevoodit ning üks kaheinimesevoodi jne...</description>
+        <comforts>
+            <comfort>
+                <comf:name>siseõu</comf:name>
+            </comfort>
+            <comfort>
+                <comf:name>rõdu</comf:name>
+            </comfort>
+            <comfort>
+                <comf:name>merevaade</comf:name>
+            </comfort>
+            <comfort>
+                <comf:name>grill</comf:name>
+            </comfort>
+        </comforts>
+    </room>
+</rooms>

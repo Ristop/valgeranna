@@ -53,11 +53,6 @@ class AdminController extends Controller
         $post->save();
         return back();
     }
-    // Ajax edit post
-    public function ajaxEditPost(Request $request, $id){
-
-        return back();
-    }
 
     // Delete post
     public function adminDeletePost(Request $request){

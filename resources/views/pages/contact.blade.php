@@ -16,7 +16,12 @@
             <div class="col-sm-6">
                 <h3>Support us!</h3>
                 <p>Click Donate to donate us 1 euro.</p>
-                <button id = "payButton" type="submit" class="btn btn-default" value="Donate">Donate</button>
+                <form action="{{ $requestUrl }}" method="post">
+                    @foreach($requestData as $fieldName => $value)
+                        <input type="hidden" name="{{ $fieldName }}" value="{{ $value }}"/>
+                    @endforeach
+                    <button id = "payButton" type="submit" class="btn btn-default" value="Donate">Donate</button>
+                </form>
             </div>
         </div>
     </div>

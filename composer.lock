@@ -4,9 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76bce7736b89f0cfef58fb84bdf65990",
-    "content-hash": "205d3bac84374f9c6c594422171fdb10",
+    "hash": "d93de02a43fdf31b0c638b1998f48717",
+    "content-hash": "0b11ff5b1936796c53ac5be8284d8170",
     "packages": [
+        {
+            "name": "arturkp/laravel-banklinks",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ArturKp/laravel-banklinks.git",
+                "reference": "4a51964ef0728cbe2bac51ba7897163f2a18ea93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ArturKp/laravel-banklinks/zipball/4a51964ef0728cbe2bac51ba7897163f2a18ea93",
+                "reference": "4a51964ef0728cbe2bac51ba7897163f2a18ea93",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.0",
+                "illuminate/support": "~5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArturKp\\LaravelBanklinks\\": "src/ArturKp/LaravelBanklinks"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artur Käpp",
+                    "email": "arturkp@gmail.com"
+                }
+            ],
+            "description": "Estonian banklinks for Laravel 5",
+            "keywords": [
+                "banklinks"
+            ],
+            "time": "2015-12-14 07:43:54"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",
@@ -2359,50 +2402,6 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
-        },
-        {
-            "name": "laracasts/utilities",
-            "version": "2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laracasts/PHP-Vars-To-Js-Transformer.git",
-                "reference": "4402a0ed774f8eb36ea7ba169341d9d5b6049378"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/PHP-Vars-To-Js-Transformer/zipball/4402a0ed774f8eb36ea7ba169341d9d5b6049378",
-                "reference": "4402a0ed774f8eb36ea7ba169341d9d5b6049378",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpspec/phpspec": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Laracasts\\Utilities\\JavaScript\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeffrey Way",
-                    "email": "jeffrey@laracasts.com"
-                }
-            ],
-            "description": "Transform your PHP to JavaScript",
-            "keywords": [
-                "javascript",
-                "laravel"
-            ],
-            "time": "2015-10-01 05:16:28"
         },
         {
             "name": "mockery/mockery",

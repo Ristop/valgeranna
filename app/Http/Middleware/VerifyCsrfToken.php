@@ -13,5 +13,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
         //
+        'callback/seb',
+        'cancel/seb'
     ];
 }

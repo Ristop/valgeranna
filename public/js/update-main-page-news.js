@@ -30,7 +30,8 @@
                         var heading = mainPagePosts[i].children[0];
                         var body = mainPagePosts[i].children[1];
                         var footer = mainPagePosts[i].children[2];
-                        heading.innerHTML = "<h4>" + titles[i] + "</h4>";
+                        var link = "posts/" + ids[i];
+                        heading.innerHTML = "<a href=" + link + "><h4>" + titles[i] + "</h4></a>";
                         body.innerHTML = contents[i].substring(0, 200);
                         footer.innerHTML = dates[i];
                     }

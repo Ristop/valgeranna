@@ -105,8 +105,8 @@
                                         {{csrf_field()}}
                                         <textarea class="form-control" type='text' name="content"></textarea>
                                         <br>
-                                        <button class="pull-left btn btn-group-sm btn-success" type="submit">Salvesta
-                                        </button>
+                                        <button class="pull-left btn btn-success btn-group-sm save-post" id={{'save-'.$post->id}}>Salvesta</button>
+
                                     </form>
                                 </div>
 

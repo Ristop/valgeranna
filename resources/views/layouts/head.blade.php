@@ -2,6 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Valgeranna puhkekeskuse veebileht">
 <meta name="keywords" content="valgeranna,puhkekeskus,broneeri,puhka,rand,baar,majutus,ööbimine,pärnu,eesti">
+<meta name="_token"content="<?php echo csrf_token()?>"/>
+
 
 <meta property="og:title" content="Valgeranna puhkekeskus">
 <meta property="og:image" content={{URL::asset('img/logo.png')}}>
@@ -24,6 +26,8 @@
 <script src={{URL::asset('/js/jquery.jscroll.js')}} defer></script>
 <script src={{URL::asset('/js/infiniteNewsScroll.js')}} defer></script>
 <script src={{URL::asset('/js/update-main-page-news.js')}} defer></script>
+<script src={{URL::asset('/js/saveAjax.js')}} defer></script>
+<script src={{URL::asset('/js/fill-rooms-info-with-xml.js')}} defer></script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

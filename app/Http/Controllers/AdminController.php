@@ -33,8 +33,8 @@ class AdminController extends Controller
         ]);
 
         $user = Auth::id();
-        $title = $request-> title;
-        $content = $request -> content;
+        $title = $request->title;
+        $content = $request->content;
         $current_time = Carbon::now();
         $current = $current_time -> toDateTimeString();
         DB::insert('insert into `posts` (user_id, title, content, created_at, updated_at) values (?,?,?,?,?)',[$user, $title, $content, $current, $current]);
@@ -46,9 +46,9 @@ class AdminController extends Controller
         //Post::create(['content' => $request->content, 'title'=>$request->title]);
         return back();
     }
-
-    public function adminEditPost(Request $request, $id) {
-        $post = Post::find($id);
+    //Edit post
+    public function adminEditPost(Request $request) {
+        $post = Post::find($request->id);
         $post->content = $request->content;
         $post->save();
         return back();
@@ -59,4 +59,5 @@ class AdminController extends Controller
         Post::destroy($request->id);
         return back();
     }
+
 }

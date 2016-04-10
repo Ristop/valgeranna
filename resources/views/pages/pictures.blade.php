@@ -17,8 +17,8 @@
             if ($file !== '.' && $file !== '..' && in_array($file_type, $file_display) == true):?>
 <!--            Setting up thumbnail format:       -->
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href=<?php echo "$dir/$file"?>>
-                    <img class="img-responsive" src=<?php echo "$dir/$file"?> alt=<?php echo"$file"?>>
+                <a class="thumbnail">
+                    <img class="img-responsive" id=<?php echo "$file" ?> src=<?php echo "$dir/$file"?> alt=<?php echo"$file"?>>
                 </a>
             </div>
             <?php endif; ?>

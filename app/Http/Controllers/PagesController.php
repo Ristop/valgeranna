@@ -8,21 +8,25 @@ use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
+    public function ajaxNewsRequest() {
+        return Post::all()->reverse()->take(2); // Take 2 most recent posts
+    }
+
     public function back(){
         return back();
     }
     
     public function home()
     {
-        $posts = Post::all()->reverse()->take(2); // Take 3 most recent posts
+        $posts = $this->ajaxNewsRequest();
         return view('pages.index', compact('posts'));
     }
+
 
     // Get all posts for the post page
     public function posts()
     {
         $posts = Post::orderBy('created_at', 'desc')->simplePaginate(4);
-
         return view('pages.news', compact('posts'));
     }
 
@@ -80,6 +84,13 @@ class PagesController extends Controller
     {
         return view('auth.passwords.reset');
     }
+    public function bankQuery(){
+        $bank = new \ArturKp\LaravelBanklinks\Estonia\SEB();
+        $bank->setCallbackUrl(\URL::to('callback/seb'));
+        $bank->setCancelUrl(\URL::to('cancel/seb'));
+        $requestData=$bank->getPaymentRequest(1,1,'Donation');
 
-
+        $requestUrl=$bank->getRequestUrl();
+        return view('pages.contact',compact('requestData','requestUrl'));
+    }
 }

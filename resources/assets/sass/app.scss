@@ -16,7 +16,8 @@ li {
 p {
   font-family: "Roboto", sans-serif !important;
   text-align: justify;
-  text-justify: inter-word;
+  text-justify: auto;
+  font-size: 15px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,6 +31,11 @@ h4 {
 
 .pager{
   margin: 0;
+}
+
+hr {
+  padding: 0;
+  margin: 5px 0;
 }
 
 .thumbnail {
@@ -100,4 +106,4 @@ h4 {
 @import "components/welcomeContainer";
 
 /* Login form---------------------------------------------------------------------------------------------------------*/
-@import "components/loginAndRegistrationFrom";
+@import "components/forms";

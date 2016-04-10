@@ -47,11 +47,13 @@
                     <p class="or-social">Või logi sisse google kasutajaga</p>
                     <a href="{{ route('social.redirect', ['provider' => 'google']) }}"
                        class="btn btn-lg btn-primary btn-block google" type="submit">Google</a>
-                    @if ($errors->has('google'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('google') }}</strong>
-                        </span>
-                    @endif
+                    <div class="{{ $errors->has('google') ? ' has-error' : '' }}">
+                        @if ($errors->has('google'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('google') }}</strong>
+                            </span>
+                        @endif
+                    </div>
                 </form>
 
             </div>

@@ -88,7 +88,8 @@ class AuthController extends Controller
     protected function createGoogleUser(array $data){
         return User::create([
             'name' => $data['name'],
-            'email' => $data['email']
+            'email' => $data['email'],
+            'isGoogleAccount'=>true
         ]);
     }
 
@@ -122,7 +123,9 @@ class AuthController extends Controller
         if (Auth::guest()){
             return view('auth.login');
         }
-        User::destroy($request->id);
+        if (!(User::where('id', $request->id)->first()->isSuperAdmin)){
+            User::destroy($request->id);
+        }
         return back();
     }
 
@@ -164,12 +167,11 @@ class AuthController extends Controller
             $validator = $this->socialValidator($newUser);
 
             if ($validator->fails()){
-                $this->throwValidationException(
-                    $newUser, $validator
-                );
+                $validator->errors()->add('google', 'Antud kasutaja on juba registreeritud');
+            }else{
+                $this->createGoogleUser($newUser);
             }
-            $this->createGoogleUser($newUser);
-            return redirect('/admin/register');
+            return redirect('/admin/register')->withErrors($validator);
         }
     }
 }

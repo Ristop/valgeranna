@@ -21,7 +21,7 @@ class AdminController extends Controller
 
     // Get all posts for the admin page
     public function adminPosts(){
-        $posts = Post::with('user')->get();
+        $posts = Post::with('user')->get()->reverse();
         return view('admin.posts', compact('posts'));
     }
 

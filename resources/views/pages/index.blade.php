@@ -43,20 +43,25 @@
                     <p>Asume vaid <strong>5km</strong> kaugusel Pärnust. Männimetsa ja liivase mererannaga puhkeala on
                         sobilik nii perepuhkuseks, suvepäevade, noortelaagrite ja koolituste korraldamiseks. Uued
                         2015 aasta suvel valminud 2-ja 4-kohalised <a href="/rooms">suvemajad</a> mahutavad kuni 100
-                        inimest. Samuti on võimalus telkimiseks.<br>
+                        inimest. Samuti on võimalus telkimiseks.
+                    <p>
                         Territoorium jaguneb erinevateks piirkondadeks, mis vastavalt soovile
                         annab võimaluse läbi viia üheaegseid tegevusi erinevates gruppides teineteist segamata või olla
-                        suure seltskonnaga kõik üheskoos.<br>
+                        suure seltskonnaga kõik üheskoos.</p>
+                    <p>
                         Pesemisvõimalused (WC ja dušš) on lähedal asuvas pesemiskompleksis. Kämpingutes on olemas
                         ööbimiseks kõik vajalik (tekid, padjad, linad,). <a href="/beach">Rand</a>, palliplats,
-                        laste mänguväljak ja <a href="/bar">rannabaar</a> on 200 m raadiuses.</p>
+                        laste mänguväljak ja <a href="/bar">rannabaar</a> on 200 m raadiuses.
+                    </p>
+
                 </div>
             </div>
             <!-- News column -->
-            <div class="col-sm-4">
+
+            <div id = "news" class="col-sm-4">
                 <h3> {{ trans('main.posts') }} </h3>
                 @foreach($posts as $post)
-                    <div class="newsPanel">
+                    <div id = {{$post->id}} class="newsPanel">
                         <div class="newsPanel-heading">
                             <a href={{ '/posts/'.$post->id }}><h4>{{ $post->title }}</h4></a>
                         </div>

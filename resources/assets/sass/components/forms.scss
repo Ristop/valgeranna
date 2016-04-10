@@ -10,7 +10,7 @@
 .form-signin .checkbox {
   font-weight: normal;
 }
-.form-signin .form-control {
+.form-signin .form-control, .form-register .form-control, .form-add-post .form-control {
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
@@ -19,7 +19,13 @@
   padding: 10px;
   font-size: 16px;
 }
-.form-signin .form-control:focus {
+
+.form-register .form-control, .form-add-post .form-control{
+    padding: 7px;
+    font-size:13px;
+}
+
+.form-signin .form-control:focus, .form-register .form-control:focus, .form-add-post .form-control:focus {
   z-index: 2;
 }
 .form-signin input[type="email"] {
@@ -63,3 +69,16 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.form-add-post input:nth-child(3){
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-add-post textarea{
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+

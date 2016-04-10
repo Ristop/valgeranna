@@ -23,6 +23,8 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
+    // Route for ajax polling request to update news elements in real time.
+    Route::get('/news/ajaxpoll', 'PagesController@ajaxNewsRequest');
 
     // Routes for main pages
     Route::get('/', 'PagesController@home');
@@ -66,4 +68,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/social/redirect/{provider}',   ['as' => $s . 'redirect',   'uses' => 'Auth\AuthController@getSocialRedirect']);
     Route::get('/social/handle/{provider}',     ['as' => $s . 'handle',     'uses' => 'Auth\AuthController@getSocialHandle']);
 
+    //BankLinkroutes..
+    Route::get('/contact','PagesController@bankQuery');
+    Route::post('callback/seb','BankController@callback');
+    Route::post('cancel/seb','BankController@cancel');
 });

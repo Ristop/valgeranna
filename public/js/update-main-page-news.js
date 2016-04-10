@@ -30,9 +30,9 @@
                         var heading = mainPagePosts[i].children[0];
                         var body = mainPagePosts[i].children[1];
                         var footer = mainPagePosts[i].children[2];
-                        heading.innerHTML = "<h4>" + titles[i] + "</h4>";
-                        body.innerHTML = contents[i].substring(0, 200);
-                        footer.innerHTML = dates[i];
+                        $(heading).text("<h4>" + titles[i] + "</h4>");
+                        $(body).text(contents[i].substring(0, 200));
+                        $(footer).text(dates[i]);
                     }
                 }
             },

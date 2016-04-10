@@ -15,7 +15,6 @@
 <link rel="stylesheet" href={{URL::asset('/css/bootstrap.css')}}>
 <link rel="stylesheet" href={{URL::asset('/css/app.css')}}>
 
-
 <!--custom fonts-->
 <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 
@@ -23,12 +22,12 @@
 <script src={{URL::asset('/js/jquery.js')}} defer></script>
 <script src={{URL::asset('/js/mobile-header.js')}} defer></script>
 <script src={{URL::asset('/js/bootstrap.min.js')}} defer></script>
-<script src={{URL::asset('/js/editPost.js')}} defer></script>
+<script src={{URL::asset('/js/edit-post.js')}} defer></script>
 <script src={{URL::asset('/js/jquery.jscroll.js')}} defer></script>
-<script src={{URL::asset('/js/infiniteNewsScroll.js')}} defer></script>
+<script src={{URL::asset('/js/infinite-news-scroll.js')}} defer></script>
 <script src={{URL::asset('/js/update-main-page-news.js')}} defer></script>
-<script src={{URL::asset('/js/saveAjax.js')}} defer></script>
-<script src={{URL::asset('/js/openPictures.js')}} defer></script>
+<script src={{URL::asset('/js/save-ajax.js')}} defer></script>
+<script src={{URL::asset('/js/open-pictures.js')}} defer></script>
 <script src={{URL::asset('/js/fill-rooms-info-with-xml.js')}} defer></script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

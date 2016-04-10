@@ -23,7 +23,6 @@
                 var dbOlder = ids[0];
                 var dbNewer = ids[1];
 
-                $(".welcomeContainer-body").text(firstPostID + " " + secondPostID + " " + dbNewer + " " + dbOlder);
                 if ((dbNewer != firstPostID || dbOlder != secondPostID) &&
                     !(firstPostID == undefined ||secondPostID == undefined || dbNewer == undefined || dbOlder == undefined)) {
                     newsContainer.find('.newsPanel:eq(0)').attr('id', dbNewer);

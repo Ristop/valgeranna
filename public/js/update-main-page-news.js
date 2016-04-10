@@ -4,40 +4,40 @@
             url: '/news/ajaxpoll',
             dataType: 'json',
             success: function (data) {
-                var posts = document.getElementById("news");
-                var firstPostID = posts.children[1].id;
-                var secondPostID = posts.children[2].id;
+                var newsContainer = $('#news');
+                var firstPostID = newsContainer.find('.newsPanel:eq(0)').attr('id')
+                var secondPostID = newsContainer.find('.newsPanel:eq(1)').attr('id')
+
                 var ids = [];
                 var titles = [];
                 var contents = [];
                 var dates = [];
+
                 for (var key in data) {
                     ids.push(data[key].id);
                     titles.push(data[key].title);
                     contents.push(data[key].content);
                     dates.push(data[key].created_at);
                 }
-                var databaseFirstID = ids[0];
-                var databaseSecondID = ids[1];
-                if ((databaseFirstID != firstPostID && databaseFirstID != secondPostID) ||
-                    (databaseSecondID != firstPostID && databaseSecondID != secondPostID)) {
-                    document.getElementById(firstPostID).setAttribute("id", databaseFirstID);
-                    document.getElementById(secondPostID).setAttribute("id", databaseSecondID);
-                    var first = document.getElementById(databaseSecondID);
-                    var second = document.getElementById(databaseFirstID);
-                    var mainPagePosts = [first, second];
+
+                var dbOlder = ids[0];
+                var dbNewer = ids[1];
+
+                $(".welcomeContainer-body").text(firstPostID + " " + secondPostID + " " + dbNewer + " " + dbOlder);
+                if ((dbNewer != firstPostID || dbOlder != secondPostID) &&
+                    !(firstPostID == undefined ||secondPostID == undefined || dbNewer == undefined || dbOlder == undefined)) {
+                    newsContainer.find('.newsPanel:eq(0)').attr('id', dbNewer);
+                    newsContainer.find('.newsPanel:eq(1)').attr('id', dbOlder);
                     for (var i = 0; i < 2; i++) {
-                        var heading = mainPagePosts[i].children[0];
-                        var body = mainPagePosts[i].children[1];
-                        var footer = mainPagePosts[i].children[2];
-                        $(heading).text("<h4>" + titles[i] + "</h4>");
-                        $(body).text(contents[i].substring(0, 200));
-                        $(footer).text(dates[i]);
+                        $("#news #"+ids[i] + " .newsPanel-heading a h4").text(titles[i]);
+                        $("#news #"+ids[i] + " .newsPanel-heading a").attr("href", "posts/" + ids[i]);
+                        $("#news #"+ids[i] + " .newsPanel-body").text(contents[i].substring(0, 200));
+                        $("#news #"+ids[i] + " .newsPanel-footer").text(dates[i]);
                     }
                 }
             },
             complete: poll
         });
-    }, 2000);
+    }, 3000);
 })();
 

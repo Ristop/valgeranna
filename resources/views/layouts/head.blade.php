@@ -15,6 +15,7 @@
 <link rel="stylesheet" href={{URL::asset('/css/bootstrap.css')}}>
 <link rel="stylesheet" href={{URL::asset('/css/app.css')}}>
 
+
 <!--custom fonts-->
 <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 
@@ -27,6 +28,7 @@
 <script src={{URL::asset('/js/infiniteNewsScroll.js')}} defer></script>
 <script src={{URL::asset('/js/update-main-page-news.js')}} defer></script>
 <script src={{URL::asset('/js/saveAjax.js')}} defer></script>
+<script src={{URL::asset('/js/openPictures.js')}} defer></script>
 <script src={{URL::asset('/js/fill-rooms-info-with-xml.js')}} defer></script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

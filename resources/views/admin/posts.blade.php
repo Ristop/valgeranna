@@ -38,7 +38,7 @@
                     <hr>
 
                     @if(isset($deleted_notification))
-                        <div class="alert alert-success" role="alert">Uudis edukalt lisatud!</div>
+                        <div class="alert alert-success" role="alert">Lisatud!</div>
                     @endif
                 </div>
                 <?php

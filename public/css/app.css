@@ -76,6 +76,60 @@ hr {
 .panel-orange {
   border-color: rgba(255, 145, 27, 0.63); }
 
+/* Gallery page ------------------------------------------------------------------------------------------------------*/
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+  padding: 0; }
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+  top: 0;
+  bottom: 0; }
+
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0; }
+
+/*
+
+for zoom animation
+uncomment this part if you haven't added this code anywhere else
+
+*/
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.3s ease-out; }
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1; }
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8; }
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0; }
+
+/* Footer ------------------------------------------------------------------------------------------------------------*/
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #ef581f;
+  color: white; }
+
 /* Navigation Menu----------------------------------------------------------------------------------------------------*/
 ul {
   margin-bottom: 0; }
@@ -423,10 +477,18 @@ div.nav-menu #header-logo {
 .rooms .row:last-child {
   margin-bottom: 0; }
 
-.rooms .row img {
+.rooms .row:nth-child(2n) img {
   width: 100%;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  max-height: 250px; }
+
+.rooms .row:nth-child(2n+1) img {
+  width: 100%;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
   display: block;
   margin: 0 auto;
   max-height: 250px; }
@@ -438,6 +500,31 @@ div.nav-menu #header-logo {
   letter-spacing: 1px;
   border-radius: 14px;
   text-transform: uppercase; }
+
+/* Bar page---------------------------------------------------------------------------------------------------------*/
+.bar .row {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+
+.bar .row:last-child {
+  margin-bottom: 0; }
+
+.bar .row:nth-child(2n) img {
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  max-height: 250px; }
+
+.bar .row:nth-child(2n+1) img {
+  width: 100%;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  max-height: 250px; }
 
 /* Main page welcome container----------------------------------------------------------------------------------------*/
 .welcomeContainer {

@@ -52,6 +52,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/admin/posts/edit/{id}', 'AdminController@adminEditPost');
     Route::post('/admin/posts/delete','AdminController@adminDeletePost');
 
+    Route::get('/admin/pictures','AdminController@adminPictures');
+
+    Route::get('/admin/pages','AdminController@adminPages');
+
     //For ajax update
     Route::post('/admin/posts/update', 'AdminController@adminEditPost');
 
@@ -70,10 +74,5 @@ Route::group(['middleware' => ['web']], function () {
     $s = 'social.';
     Route::get('/social/redirect/{provider}',   ['as' => $s . 'redirect',   'uses' => 'Auth\AuthController@getSocialRedirect']);
     Route::get('/social/handle/{provider}',     ['as' => $s . 'handle',     'uses' => 'Auth\AuthController@getSocialHandle']);
-
-    //Bank link routes
-    Route::get('/contact','PagesController@bankQuery');
-    Route::post('callback/seb','BankController@callback');
-    Route::post('cancel/seb','BankController@cancel');
 
 });

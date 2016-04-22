@@ -13,6 +13,6 @@ return [
 
     'contactUs' => 'Võta meiega ühendust',
     'contact' => 'Kontakt',
-    'howToContact' => 'Saada kiri meiliaadressile...',
-    'contactInfo' => 'Asume Pärnu lähedal...'
+    'howToContact' => 'Valgeranna@gmail.com +372 5770 5006',
+    'contactInfo' => 'Valgerand, 88301 Valgeranna, Eesti'
 ];

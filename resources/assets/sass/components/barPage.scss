@@ -1,15 +1,15 @@
-.rooms .row {
+.bar .row {
   padding: 20px 0;
   margin-bottom: 20px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
 }
 
-.rooms .row:last-child {
+.bar .row:last-child {
   margin-bottom: 0;
 }
 
-.rooms .row:nth-child(2n) img {
+.bar .row:nth-child(2n) img {
   width: 100%;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -18,20 +18,11 @@
   max-height: 250px;
 }
 
-.rooms .row:nth-child(2n+1) img {
+.bar .row:nth-child(2n+1) img {
   width: 100%;
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
   display: block;
   margin: 0 auto;
   max-height: 250px;
-}
-
-.rooms .row button {
-  padding: 14px 24px;
-  border: 0 none;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border-radius: 14px;
-  text-transform: uppercase;
 }

@@ -31,18 +31,18 @@ class AdminController extends Controller
             'title' => 'required|min:10',
             'content' => 'required|min:10'
         ]);
-
+        /*
         $user = Auth::id();
         $title = $request->title;
         $content = $request->content;
         $current_time = Carbon::now();
         $current = $current_time -> toDateTimeString();
         DB::insert('insert into `posts` (user_id, title, content, created_at, updated_at) values (?,?,?,?,?)',[$user, $title, $content, $current, $current]);
-
+        */
         // Replace previous with this after the course is over
-        /*$post = new Post($request->all());
+        $post = new Post($request->all());
         $post->by(Auth::user());
-        $post->save();*/
+        $post->save();
         //Post::create(['content' => $request->content, 'title'=>$request->title]);
         return back();
     }
@@ -58,6 +58,16 @@ class AdminController extends Controller
     public function adminDeletePost(Request $request){
         Post::destroy($request->id);
         return back();
+    }
+
+    // Delete post
+    public function adminPictures(){
+        return view('admin.pictures');
+    }
+
+    // Delete post
+    public function adminPages(){
+        return view('admin.pages');
     }
 
 }

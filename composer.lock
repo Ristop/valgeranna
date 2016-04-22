@@ -4,52 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "81acfbf1e6359124e4e6f00ebf230462",
-    "content-hash": "0b11ff5b1936796c53ac5be8284d8170",
+    "hash": "16b1482569c988f59ddb0b09e5e6cdf7",
+    "content-hash": "205d3bac84374f9c6c594422171fdb10",
     "packages": [
-        {
-            "name": "arturkp/laravel-banklinks",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ArturKp/laravel-banklinks.git",
-                "reference": "4a51964ef0728cbe2bac51ba7897163f2a18ea93"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ArturKp/laravel-banklinks/zipball/4a51964ef0728cbe2bac51ba7897163f2a18ea93",
-                "reference": "4a51964ef0728cbe2bac51ba7897163f2a18ea93",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/config": "~5.0",
-                "illuminate/support": "~5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.0.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ArturKp\\LaravelBanklinks\\": "src/ArturKp/LaravelBanklinks"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Artur Käpp",
-                    "email": "arturkp@gmail.com"
-                }
-            ],
-            "description": "Estonian banklinks for Laravel 5",
-            "keywords": [
-                "banklinks"
-            ],
-            "time": "2015-12-14 07:43:54"
-        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",
@@ -2252,6 +2209,49 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "arturkp/laravel-banklinks",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ArturKp/laravel-banklinks.git",
+                "reference": "4a51964ef0728cbe2bac51ba7897163f2a18ea93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ArturKp/laravel-banklinks/zipball/4a51964ef0728cbe2bac51ba7897163f2a18ea93",
+                "reference": "4a51964ef0728cbe2bac51ba7897163f2a18ea93",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.0",
+                "illuminate/support": "~5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArturKp\\LaravelBanklinks\\": "src/ArturKp/LaravelBanklinks"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artur Käpp",
+                    "email": "arturkp@gmail.com"
+                }
+            ],
+            "description": "Estonian banklinks for Laravel 5",
+            "keywords": [
+                "banklinks"
+            ],
+            "time": "2015-12-14 07:43:54"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",

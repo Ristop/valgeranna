@@ -7,21 +7,12 @@
         <div class="row">
             <div class="col-sm-6">
                 <h3> {{ trans('contact.contactUs') }} </h3>
-                <p> {{ trans('contact.howToContact') }} </p>
+
+                <p>Valgeranna@gmail.com <br>+372 5770 5006<p>
             </div>
             <div class="col-sm-6">
                 <h3> {{ trans('contact.contact') }} </h3>
                 <p> {{ trans('contact.contactInfo') }} </p>
-            </div>
-            <div class="col-sm-6">
-                <h3>Support us!</h3>
-                <p>Click Donate button:</p>
-                <form action="{{ $requestUrl }}" method="post">
-                    @foreach($requestData as $fieldName => $value)
-                        <input type="hidden" name="{{ $fieldName }}" value="{{ $value }}"/>
-                    @endforeach
-                    <button id = "payButton" type="submit" class="btn btn-default" value="Donate">Donate</button>
-                </form>
             </div>
         </div>
     </div>

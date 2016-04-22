@@ -28,7 +28,6 @@
 <script src={{URL::asset('/js/infinite-news-scroll.js')}} defer></script>
 <script src={{URL::asset('/js/update-main-page-news.js')}} defer></script>
 <script src={{URL::asset('/js/save-ajax.js')}} defer></script>
-<script src={{URL::asset('/js/fill-rooms-info-with-xml.js')}} defer></script>
 <script src={{URL::asset('/js/single-image-lightbox.js')}} defer></script>
 <script src={{URL::asset('/js/jquery.magnific-popup.js')}} defer></script>
 

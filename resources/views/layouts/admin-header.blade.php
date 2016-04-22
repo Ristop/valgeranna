@@ -9,7 +9,7 @@
                 <li class="{{ Route::getCurrentRoute()->getPath()=='admin/pictures' ? 'active-link' : '' }}">
                     <a href="#">Pildid</a>
                 </li>
-                <li class="{{ Route::getCurrentRoute()->getPath()=='admin/Lehed' ? 'active-link' : '' }}">
+                <li class="{{ Route::getCurrentRoute()->getPath()=='admin/pages' ? 'active-link' : '' }}">
                     <a href="#">Lehed</a>
                 </li>
                 <li class="{{ Route::getCurrentRoute()->getPath()=='admin/register' ? 'active-link' : '' }}">
@@ -32,7 +32,7 @@
             <li class="{{ Route::getCurrentRoute()->getPath()=='admin/pictures' ? 'active-link' : '' }}">
                 <a href="/admin/pictures">Pildid</a>
             </li>
-            <li class="{{ Route::getCurrentRoute()->getPath()=='admin/Lehed' ? 'active-link' : '' }}">
+            <li class="{{ Route::getCurrentRoute()->getPath()=='admin/pages' ? 'active-link' : '' }}">
                 <a href="/admin/pages">Lehed</a>
             </li>
             <li class="{{ Route::getCurrentRoute()->getPath()=='admin/register' ? 'active-link' : '' }}">

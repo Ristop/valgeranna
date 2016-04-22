@@ -9,7 +9,7 @@
                     <p>
                         Kaunil, otse rannaliival asetseval terrassil tekib peomeeleolu juba iseenesest. Sünnipäevad,
                         firmapeod, pulmad, see kõik on meie juures võimalik. Avarale terrassile mahutab 40-100
-                        inimest. Toitlustuse osas pakume menüüd Teie soovidest lähtuvalt.
+                        inimest.</p><p> Toitlustuse osas pakume menüüd Teie soovidest lähtuvalt.
                     </p>
                 </div>
                 <div class="col-xs-12 col-md-3">

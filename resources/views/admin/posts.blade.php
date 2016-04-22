@@ -97,7 +97,7 @@
                                     <a href={{'/posts/'.$post->id}}><h4>{{$post->title}}</h4></a>
                                 </div>
                                 <div class="newsPanel-body" id={{'post-'.$post->id}}>
-                                    {{$post->content}}
+                                    {!! nl2br(e($post->content)) !!}
                                 </div>
                                 <div class="newsPanel-body">
                                     <form class="form-group editForm hidden" method='post'

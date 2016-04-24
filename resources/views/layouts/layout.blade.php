@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="/offline.appcache">
 <head>
     @include('layouts.head')
 </head>

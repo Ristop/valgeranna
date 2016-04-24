@@ -13,12 +13,16 @@
                     </p>
                 </div>
                 <div class="col-xs-12 col-md-3">
-                    <img src={{URL::asset('/img/bar/6.jpg')}} alt="Rannabaar">
+                    <a class="image-popup-no-margins" href="{{URL::asset('/img/bar/6.jpg')}}">
+                        <img src={{URL::asset('/img/bar/6.jpg')}} alt="Rannabaar">
+                    </a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-3">
-                    <img src={{URL::asset('/img/bar/test.jpg')}} alt="Rannabaar">
+                    <a class="image-popup-no-margins" href="{{URL::asset('/img/bar/test.jpg')}}">
+                        <img src={{URL::asset('/img/bar/test.jpg')}} alt="Rannabaar">
+                    </a>
                 </div>
                 <div class="col-xs-12 col-md-9">
                     <h1>Menüü</h1>

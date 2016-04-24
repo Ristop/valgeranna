@@ -27,14 +27,16 @@ class PagesController extends Controller
     public function posts()
     {
         $posts = Post::orderBy('created_at', 'desc')->simplePaginate(4);
-        return view('pages.news', compact('posts'));
+        $current_post = $posts[0];
+        return view('pages.news')->with('current_post', $current_post)->with('posts', $posts);
     }
 
     // Get post by the id
     public function post($id)
     {
-        $post = Post::findOrFail($id);
-        return view('pages.singlePost', compact('post'));
+        $current_post = Post::findOrFail($id);
+        $posts = Post::orderBy('created_at', 'desc')->simplePaginate(4);
+        return view('pages.news')->with('current_post', $current_post)->with('posts', $posts);
     }
 
     public function contact()

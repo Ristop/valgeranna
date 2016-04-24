@@ -11,8 +11,9 @@ return [
     |
     */
 
-    'contactUs' => 'Võta meiega ühendust',
-    'contact' => 'Kontakt',
-    'howToContact' => 'Valgeranna@gmail.com +372 5770 5006',
-    'contactInfo' => 'Valgerand, 88301 Valgeranna, Eesti'
+    'contactUs' => 'Kontakt',
+    'contact' => 'Asukoht',
+    'email' => 'Valgeranna@gmail.com',
+    'phone' => '+372 5770 5006',
+    'location' => 'Valgerand, 88301 Valgeranna, Eesti'
 ];

@@ -1,22 +1,22 @@
 <div class="container">
     <header>
+
         <nav>
             <div class="dropdown flag">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="/img/flags/{{ \App::getLocale() }}_flag.png" alt = "flag">
+                    <img src="/img/flags/{{ \App::getLocale() }}_flag.png" alt="flag">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-position">
                     @foreach (Config::get('languages') as $lang => $language)
                         @if ($lang != App::getLocale())
                             <li>
                                 <a href="{{ route('lang.switch', $lang) }}">
-                                    <img src="/img/flags/{{ $lang }}_flag.png" alt = "flag"> {{$language}}
+                                    <img src="/img/flags/{{ $lang }}_flag.png" alt="flag"> {{$language}}
                                 </a>
                             </li>
                         @endif
                     @endforeach
                 </ul>
-
             </div>
             <span class="menu-trigger">MENÜÜ</span>
             <div class="nav-menu">

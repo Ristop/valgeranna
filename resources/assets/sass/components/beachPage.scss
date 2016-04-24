@@ -10,10 +10,24 @@
 }
 
 .beach .row img {
+  //opacity: 0.5;
   width: 100%;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  //border-top-right-radius: 20px;
   display: block;
   margin: 0 auto;
   max-height: 200px;
 }
+
+.beach-heading{
+  position: absolute;
+  margin-left: 30px;
+  h1{
+    color: white;
+  }
+}
+
+.beach-content{
+  padding: 20px;
+}
+

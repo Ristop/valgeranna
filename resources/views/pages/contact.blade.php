@@ -7,12 +7,12 @@
         <div class="row">
             <div class="col-sm-6">
                 <h3> {{ trans('contact.contactUs') }} </h3>
-
-                <p>Valgeranna@gmail.com <br>+372 5770 5006<p>
+                <p><strong>Email: </strong> {{trans('contact.email')}}</p>
+                <p><strong>Tel: </strong> {{trans('contact.phone')}}</p>
             </div>
             <div class="col-sm-6">
                 <h3> {{ trans('contact.contact') }} </h3>
-                <p> {{ trans('contact.contactInfo') }} </p>
+                <p> {{ trans('contact.location') }} </p>
             </div>
         </div>
     </div>

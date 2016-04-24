@@ -11,8 +11,9 @@ return [
     |
     */
 
-    'contactUs' => 'Contact us',
-    'contact' => 'Contact',
-    'howToContact' => 'Send an email to...',
-    'contactInfo' => 'We are located near Pärnu...'
+    'contactUs' => 'Contact',
+    'contact' => 'Location',
+    'email' => 'Valgeranna@gmail.com',
+    'phone' => '+372 5770 5006',
+    'location' => 'Valgerand, 88301 Valgeranna, Estonia'
 ];

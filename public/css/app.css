@@ -119,16 +119,19 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px; }
+  margin-bottom: 40px; }
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #ef581f;
-  color: white; }
+  height: 40px;
+  background-color: rgba(255, 145, 27, 0.63);
+  color: black; }
+
+.footer-text {
+  padding-top: 10px; }
 
 /* Navigation Menu----------------------------------------------------------------------------------------------------*/
 ul {
@@ -453,10 +456,12 @@ div.nav-menu #header-logo {
   font-family: "Roboto", sans-serif !important;
   border-bottom: 1px solid darkgray;
   padding-bottom: 5px;
+  padding-left: 5px;
   font-weight: 600; }
 
 .newsPanel-body {
-  padding-top: 5px; }
+  padding-top: 7px;
+  padding-left: 5px; }
 
 .newsPanel-footer {
   padding-top: 5px;
@@ -512,11 +517,19 @@ div.nav-menu #header-logo {
 
 .beach .row img {
   width: 100%;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   display: block;
   margin: 0 auto;
   max-height: 200px; }
+
+.beach-heading {
+  position: absolute;
+  margin-left: 30px; }
+  .beach-heading h1 {
+    color: white; }
+
+.beach-content {
+  padding: 20px; }
 
 /* Bar page---------------------------------------------------------------------------------------------------------*/
 .bar .row {

@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="Valgeranna puhkekeskuse veebileht">
 <meta name="keywords" content="valgeranna,puhkekeskus,broneeri,puhka,rand,baar,majutus,ööbimine,pärnu,eesti">
-<meta name="_token"content="<?php echo csrf_token()?>"/>
+<meta name="_token" content="<?php echo csrf_token()?>"/>
 
 
 <meta property="og:title" content="Valgeranna puhkekeskus">

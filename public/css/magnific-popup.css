@@ -75,7 +75,7 @@
 .mfp-counter {
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none; }
+  }
 
 .mfp-loading.mfp-figure {
   display: none; }
@@ -116,7 +116,7 @@ button.mfp-arrow {
   padding: 0;
   z-index: 1046;
   box-shadow: none;
-  touch-action: manipulation; }
+  }
 
 button::-moz-focus-inner {
   padding: 0;

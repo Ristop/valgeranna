@@ -27,7 +27,7 @@ class PagesController extends Controller
     public function posts()
     {
         $posts = Post::orderBy('created_at', 'desc')->simplePaginate(4);
-        $current_post = $posts[0];
+        $current_post = Post::all()->last();
         return view('pages.news')->with('current_post', $current_post)->with('posts', $posts);
     }
 

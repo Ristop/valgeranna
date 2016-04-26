@@ -2,7 +2,7 @@
   color: $mainOrange;
 }
 
-.newsPanel {
+.newsPanel, .news-history {
   padding: 2px 5px 5px;
   margin: 15px 0;
   border-left: 1px solid $mainOrange;
@@ -11,6 +11,8 @@
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .10);
 }
+
+
 
 .newsPanel-heading {
   padding-top: 0;
@@ -37,4 +39,20 @@
 .newsSidebar {
   vertical-align: top;
   background-color: #00AA00;
+}
+
+.news-history{
+  margin:  4px 0 ;
+  //background-color: lightgray;
+}
+
+.post-history{
+  padding-left: 5px;
+}
+
+.post-current{
+  .post-history a h4{
+    color: black;
+  }
+  background-color: $blueGrey;
 }

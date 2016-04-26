@@ -1,8 +1,11 @@
 $mainOrange: #ef581f;
 $lightOrange: rgba(255, 145, 27, 0.63);
+$blueGrey: #ECEFF1;
+
 
 body {
   background-color: whitesmoke;
+  //background-image: url("../img/beach.jpg");
 }
 
 a:hover {
@@ -32,7 +35,10 @@ h4 {
 .pager{
   margin: 0;
 }
-
+.jscroll-inner ol{
+  padding: 0;
+  margin: 0;
+}
 hr {
   padding: 0;
   margin: 5px 0;

@@ -15,9 +15,7 @@
  * @preserve
  */
 (function($) {
-
     'use strict';
-
     // Define the jscroll namespace and default settings
     $.jscroll = {
         defaults: {
@@ -35,7 +33,6 @@
 
     // Constructor
     var jScroll = function($e, options) {
-
         // Private vars and methods
         var _data = $e.data('jscroll'),
             _userOptions = (typeof options === 'function') ? { callback: options } : options,
@@ -47,7 +44,7 @@
             _$scroll = _isWindow ? _$window : $e,
             _nextHref = $.trim(_$next.attr('href') + ' ' + _options.contentSelector),
 
-            // Check if a loading image is defined and preload
+        // Check if a loading image is defined and preload
             _preloadImage = function() {
                 var src = $(_options.loadingHtml).filter('img').attr('src');
                 if (src) {
@@ -56,27 +53,20 @@
                 }
             },
 
-            // Wrap inner content, if it isn't already
+        // Wrap inner content, if it isn't already
             _wrapInnerContent = function() {
-                if (!$e.find('.jscroll-inner').length) {
-                    $e.contents().wrapAll('<div class="jscroll-inner" />');
-                }
+                if (!$e.find('.jscroll-inner').length) {$e.contents().wrapAll('<div class="jscroll-inner" />');}
             },
-
-            // Find the next link's parent, or add one, and hide it
+        // Find the next link's parent, or add one, and hide it
             _nextWrap = function($next) {
                 var $parent;
-                if (_options.pagingSelector) {
-                    $next.closest(_options.pagingSelector).hide();
-                } else {
+                if (_options.pagingSelector) {$next.closest(_options.pagingSelector).hide();}
+                else {
                     $parent = $next.parent().not('.jscroll-inner,.jscroll-added').addClass('jscroll-next-parent');
-                    if (!$parent.length) {
-                        $next.wrap('<div class="jscroll-next-parent" />').parent().hide();
-                    }
+                    if (!$parent.length) {$next.wrap('<div class="jscroll-next-parent" />').parent().hide();}
                 }
             },
-
-            // Remove the jscroll behavior and data from an element
+        // Remove the jscroll behavior and data from an element
             _destroy = function() {
                 return _$scroll.unbind('.jscroll')
                     .removeData('jscroll')
@@ -84,7 +74,7 @@
                     .filter('.jscroll-added').children().unwrap();
             },
 
-            // Observe the scroll event for when to trigger the next load
+        // Observe the scroll event for when to trigger the next load
             _observe = function() {
                 _wrapInnerContent();
                 var $inner = $e.find('div.jscroll-inner').first(),
@@ -102,8 +92,7 @@
                     return _load();
                 }
             },
-
-            // Check if the href for the next set of content has been set
+        // Check if the href for the next set of content has been set
             _checkNextHref = function(data) {
                 data = data || $e.data('jscroll');
                 if (!data || !data.nextHref) {
@@ -115,26 +104,19 @@
                     return true;
                 }
             },
-            
             _setBindings = function() {
                 var $next = $e.find(_options.nextSelector).first();
-                if (!$next.length) {
-                    return;
-                }
+                if (!$next.length) {return;}
                 if (_options.autoTrigger && (_options.autoTriggerUntil === false || _options.autoTriggerUntil > 0)) {
                     _nextWrap($next);
-                     var scrollingBodyHeight = _$body.height() - $e.offset().top,
-                    	scrollingHeight = ($e.height() < scrollingBodyHeight) ? $e.height() : scrollingBodyHeight,
-                    	windowHeight = ($e.offset().top - _$window.scrollTop() > 0) ? _$window.height() - ($e.offset().top - $(window).scrollTop()) : _$window.height();
-                    if (scrollingHeight <= windowHeight) {
-                        _observe();
-                    }
+                    var scrollingBodyHeight = _$body.height() - $e.offset().top,
+                        scrollingHeight = ($e.height() < scrollingBodyHeight) ? $e.height() : scrollingBodyHeight,
+                        windowHeight = ($e.offset().top - _$window.scrollTop() > 0) ? _$window.height() - ($e.offset().top - $(window).scrollTop()) : _$window.height();
+                    if (scrollingHeight <= windowHeight) {_observe();}
                     _$scroll.unbind('.jscroll').bind('scroll.jscroll', function() {
                         return _observe();
                     });
-                    if (_options.autoTriggerUntil > 0) {
-                        _options.autoTriggerUntil--;
-                    }
+                    if (_options.autoTriggerUntil > 0) {_options.autoTriggerUntil--;}
                 } else {
                     _$scroll.unbind('.jscroll');
                     $next.bind('click.jscroll', function() {
@@ -144,8 +126,7 @@
                     });
                 }
             },
-
-            // Load the next set of content, if available
+        // Load the next set of content, if available
             _load = function() {
                 var $inner = $e.find('div.jscroll-inner').first(),
                     data = $e.data('jscroll');
@@ -154,26 +135,21 @@
                 $inner.append('<div class="jscroll-added" />')
                     .children('.jscroll-added').last()
                     .html('<div class="jscroll-loading">' + _options.loadingHtml + '</div>');
-
                 return $e.animate({scrollTop: $inner.outerHeight()}, 0, function() {
                     $inner.find('div.jscroll-added').last().load(data.nextHref, function(r, status) {
-                        if (status === 'error') {
-                            return _destroy();
-                        }
+                        if (status === 'error') {return _destroy();}
                         var $next = $(this).find(_options.nextSelector).first();
                         data.waiting = false;
                         data.nextHref = $next.attr('href') ? $.trim($next.attr('href') + ' ' + _options.contentSelector) : false;
                         $('.jscroll-next-parent', $e).remove(); // Remove the previous next link now that we have a new one
                         _checkNextHref();
-                        if (_options.callback) {
-                            _options.callback.call(this);
-                        }
+                        if (_options.callback) {_options.callback.call(this);}
                         _debug('dir', data);
                     });
                 });
             },
 
-            // Safe console debug - http://klauzinski.com/javascript/safe-firebug-console-in-javascript
+        // Safe console debug - http://klauzinski.com/javascript/safe-firebug-console-in-javascript
             _debug = function(m) {
                 if (_options.debug && typeof console === 'object' && (typeof m === 'object' || typeof console[m] === 'function')) {
                     if (typeof m === 'object') {
@@ -182,16 +158,11 @@
                             if (typeof console[sMethod] === 'function') {
                                 args = (m[sMethod].length) ? m[sMethod] : [m[sMethod]];
                                 console[sMethod].apply(console, args);
-                            } else {
-                                console.log.apply(console, args);
-                            }
+                            } else {console.log.apply(console, args);}
                         }
-                    } else {
-                        console[m].apply(console, Array.prototype.slice.call(arguments, 1));
-                    }
+                    } else {console[m].apply(console, Array.prototype.slice.call(arguments, 1));}
                 }
             };
-
         // Initialization
         $e.data('jscroll', $.extend({}, _data, {initialized: true, waiting: false, nextHref: _nextHref}));
         _wrapInnerContent();
@@ -204,19 +175,14 @@
         });
         return $e;
     };
-
     // Define the jscroll plugin method and loop
     $.fn.jscroll = function(m) {
         return this.each(function() {
             var $this = $(this),
                 data = $this.data('jscroll'), jscroll;
-
             // Instantiate jScroll on this element if it hasn't been already
-            if (data && data.initialized) {
-                return;
-            }
+            if (data && data.initialized) {return;}
             jscroll = new jScroll($this, m);
         });
     };
-
 })(jQuery);

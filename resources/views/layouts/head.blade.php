@@ -20,7 +20,7 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 
 <!--javascript-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script>if (!window.jQuery) {
         document.write('<script src={{URL::asset('/js/jquery.js')}} defer><\/script>');
     }

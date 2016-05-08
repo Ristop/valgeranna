@@ -1,5 +1,9 @@
 body {
-  background-color: whitesmoke; }
+  background-color: white; }
+
+.header-background {
+  background: url("../img/beach.jpg") no-repeat;
+  background-size: 1560px 156px; }
 
 a:hover {
   text-decoration: none; }

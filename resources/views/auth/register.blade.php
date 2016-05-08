@@ -92,7 +92,7 @@
 
                             <div class="form-group">
                                 <div class="col-md-6 btn-group" role="group">
-                                    <button type="submit" class="btn btn-success"><i class="fa fa-btn fa-user"></i>
+                                    <button type="submit" name="register" class="btn btn-success"><i class="fa fa-btn fa-user"></i>
                                         Registreeri
                                     </button>
                                     <a href="{{ route('social.redirect', ['provider' => 'google']) }}"

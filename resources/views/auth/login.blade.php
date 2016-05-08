@@ -39,7 +39,7 @@
                         </label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" name="Logi sisse" class="btn btn-primary">
                         <i class="fa fa-btn fa-sign-in"></i> Logi sisse
                     </button>
 

@@ -56,7 +56,7 @@ class AdminController extends Controller
 
     // Delete post
     public function adminDeletePost(Request $request){
-        Post::destroy($request->id);
+        Post::destroy($request->delete);
         return back();
     }
 

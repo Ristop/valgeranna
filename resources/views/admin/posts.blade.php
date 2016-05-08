@@ -31,7 +31,7 @@
                             <textarea id="content" class="form-control" rows="5" name="content" placeholder="Sisu" required>{{old('content')}}</textarea>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-success" value="Submit">Lisa</button>
+                                <button type="submit" class="btn btn-success" name="Lisa" value="Submit">Lisa</button>
                             </div>
                     </form>
 
@@ -86,7 +86,7 @@
                                                     id={{'edit-'.$post->id}}  value={{$post->id}}> Muuda
                                             </button>
                                             {{csrf_field()}}
-                                            <button class="btn btn-danger" type="submit" name="id" value={{$post->id}} >
+                                            <button class="btn btn-danger" type="submit" name="delete" value={{$post->id}} >
                                                 Kustuta
                                             </button>
                                         </div>
@@ -105,7 +105,7 @@
                                         {{csrf_field()}}
                                         <textarea class="form-control" type='text' name="content"></textarea>
                                         <br>
-                                        <button class="pull-left btn btn-success btn-group-sm save-post" id={{'save-'.$post->id}}>Salvesta</button>
+                                        <button class="pull-left btn btn-success btn-group-sm save-post" name="save" id={{'save-'.$post->id}}>Salvesta</button>
 
                                     </form>
                                 </div>

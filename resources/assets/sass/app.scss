@@ -4,8 +4,13 @@ $blueGrey: #ECEFF1;
 
 
 body {
-  background-color: whitesmoke;
+  background-color: white
   //background-image: url("../img/beach.jpg");
+}
+
+.header-background{
+  background: url("../img/beach.jpg") no-repeat;
+  background-size: 1560px 156px;
 }
 
 a:hover {

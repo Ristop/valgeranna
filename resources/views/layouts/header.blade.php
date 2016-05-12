@@ -1,4 +1,4 @@
-<div>
+<div class="header-background">
     <div class="container">
         <header>
             <nav>

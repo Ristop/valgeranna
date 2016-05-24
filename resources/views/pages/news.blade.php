@@ -14,10 +14,12 @@
                 {{ $posts->links() }}
             </div>
         </div>
-        <div class="col-xs-12 col-md-9 col-lg-9">
-            <div >
-                @include('layouts.post-layout')
+        @if($current_post != null)
+            <div class="col-xs-12 col-md-9 col-lg-9">
+                <div >
+                    @include('layouts.post-layout')
+                </div>
             </div>
-        </div>
+        @endif
     </div>
 @stop

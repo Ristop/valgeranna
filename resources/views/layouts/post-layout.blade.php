@@ -1,4 +1,5 @@
 <div class="col-sm-12 col-xs-12 pull-right">
+
     <div class="newsPanel">
         <div class="newsPanel-heading">
             <a href={{'/posts/'.$current_post->id}}><h4>{{$current_post->title}}</h4></a>
